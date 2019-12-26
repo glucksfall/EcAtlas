@@ -93,7 +93,7 @@ begin parameters
   rvs_ProtMet_RuleAssembly_1            0.000000e+00
   t0_lacI                               3.000000e+00
   t0_lacY                               1.000000e+00
-  t0_lacZ                               1.000000e+00
+  t0_lacZ                               4.000000e+00
   fwd_TF_TFBS_rule_1                    1.000000e+00
   rvs_TF_TFBS_rule_1                    0.000000e+00
   fwd_TF_TFBS_rule_2                    1.000000e+00
@@ -192,19 +192,19 @@ begin reaction rules
   RXN0_7215:                        prot(name~lacY) + met(name~PROTON,loc~per) + met(name~CPD_3561,loc~per) <-> prot(name~lacY) + met(name~PROTON,loc~cyt) + met(name~CPD_3561,loc~cyt)    fwd_RXN0_7215, rvs_RXN0_7215
   RXN0_7217:                        prot(name~lacY) + met(name~PROTON,loc~per) + met(name~CPD_3785,loc~per) <-> prot(name~lacY) + met(name~PROTON,loc~cyt) + met(name~CPD_3785,loc~cyt)    fwd_RXN0_7217, rvs_RXN0_7217
   RXN_17755:                        prot(name~lacY) + met(name~PROTON,loc~per) + met(name~CPD_3801,loc~per) <-> prot(name~lacY) + met(name~PROTON,loc~cyt) + met(name~CPD_3801,loc~cyt)    fwd_RXN_17755, rvs_RXN_17755
-  BETAGALACTOSID_RXN:               prot(name~lacZ) + met(name~beta_lactose,loc~cyt) + met(name~WATER,loc~cyt) <-> prot(name~lacZ) + met(name~beta_GALACTOSE,loc~cyt) + met(name~beta_glucose,loc~cyt)    fwd_BETAGALACTOSID_RXN, rvs_BETAGALACTOSID_RXN
-  BETAGALACTOSID_RXN_alpha:         prot(name~lacZ) + met(name~alpha_lactose,loc~cyt) + met(name~WATER,loc~cyt) <-> prot(name~lacZ) + met(name~alpha_GALACTOSE,loc~cyt) + met(name~alpha_glucose,loc~cyt)    fwd_BETAGALACTOSID_RXN_alpha, rvs_BETAGALACTOSID_RXN_alpha
-  RXN0_5363:                        prot(name~lacZ) + met(name~alpha_lactose,loc~cyt) <-> prot(name~lacZ) + met(name~alpha_ALLOLACTOSE,loc~cyt)    fwd_RXN0_5363, rvs_RXN0_5363
-  RXN0_5363_beta:                   prot(name~lacZ) + met(name~beta_lactose,loc~cyt) <-> prot(name~lacZ) + met(name~beta_ALLOLACTOSE,loc~cyt)    fwd_RXN0_5363_beta, rvs_RXN0_5363_beta
-  ALLOLACTOSE_DEG_alpha:            prot(name~lacZ) + met(name~alpha_ALLOLACTOSE,loc~cyt) + met(name~WATER,loc~cyt) <-> prot(name~lacZ) + met(name~alpha_GALACTOSE,loc~cyt) + met(name~alpha_glucose,loc~cyt)    fwd_ALLOLACTOSE_DEG_alpha, rvs_ALLOLACTOSE_DEG_alpha
-  ALLOLACTOSE_DEG_beta:             prot(name~lacZ) + met(name~beta_ALLOLACTOSE,loc~cyt) + met(name~WATER,loc~cyt) <-> prot(name~lacZ) + met(name~beta_GALACTOSE,loc~cyt) + met(name~beta_glucose,loc~cyt)    fwd_ALLOLACTOSE_DEG_beta, rvs_ALLOLACTOSE_DEG_beta
-  RXN_17726:                        prot(name~lacZ) + met(name~CPD_3561,loc~cyt) + met(name~WATER,loc~cyt) <-> prot(name~lacZ) + met(name~beta_GALACTOSE,loc~cyt) + met(name~Fructofuranose,loc~cyt)    fwd_RXN_17726, rvs_RXN_17726
-  RXN0_7219:                        prot(name~lacZ) + met(name~CPD_3785,loc~cyt) + met(name~WATER,loc~cyt) <-> prot(name~lacZ) + met(name~beta_GALACTOSE,loc~cyt) + met(name~D_ARABINOSE,loc~cyt)    fwd_RXN0_7219, rvs_RXN0_7219
-  GALACTOACETYLTRAN_RXN_galactose:  prot(name~lacA) + met(name~beta_GALACTOSE,loc~cyt) + met(name~ACETYL_COA,loc~cyt) <-> prot(name~lacA) + met(name~_6_Acetyl_beta_D_Galactose,loc~cyt) + met(name~CO_A,loc~cyt)    fwd_GALACTOACETYLTRAN_RXN_galactose, rvs_GALACTOACETYLTRAN_RXN_galactose
+  BETAGALACTOSID_RXN:               prot(name~lacZ,up!+,dw!+) + met(name~beta_lactose,loc~cyt) + met(name~WATER,loc~cyt) <-> prot(name~lacZ,up!+,dw!+) + met(name~beta_GALACTOSE,loc~cyt) + met(name~beta_glucose,loc~cyt)    fwd_BETAGALACTOSID_RXN, rvs_BETAGALACTOSID_RXN
+  BETAGALACTOSID_RXN_alpha:         prot(name~lacZ,up!+,dw!+) + met(name~alpha_lactose,loc~cyt) + met(name~WATER,loc~cyt) <-> prot(name~lacZ,up!+,dw!+) + met(name~alpha_GALACTOSE,loc~cyt) + met(name~alpha_glucose,loc~cyt)    fwd_BETAGALACTOSID_RXN_alpha, rvs_BETAGALACTOSID_RXN_alpha
+  RXN0_5363:                        prot(name~lacZ,up!+,dw!+) + met(name~alpha_lactose,loc~cyt) <-> prot(name~lacZ,up!+,dw!+) + met(name~alpha_ALLOLACTOSE,loc~cyt)    fwd_RXN0_5363, rvs_RXN0_5363
+  RXN0_5363_beta:                   prot(name~lacZ,up!+,dw!+) + met(name~beta_lactose,loc~cyt) <-> prot(name~lacZ,up!+,dw!+) + met(name~beta_ALLOLACTOSE,loc~cyt)    fwd_RXN0_5363_beta, rvs_RXN0_5363_beta
+  ALLOLACTOSE_DEG_alpha:            prot(name~lacZ,up!+,dw!+) + met(name~alpha_ALLOLACTOSE,loc~cyt) + met(name~WATER,loc~cyt) <-> prot(name~lacZ,up!+,dw!+) + met(name~alpha_GALACTOSE,loc~cyt) + met(name~alpha_glucose,loc~cyt)    fwd_ALLOLACTOSE_DEG_alpha, rvs_ALLOLACTOSE_DEG_alpha
+  ALLOLACTOSE_DEG_beta:             prot(name~lacZ,up!+,dw!+) + met(name~beta_ALLOLACTOSE,loc~cyt) + met(name~WATER,loc~cyt) <-> prot(name~lacZ,up!+,dw!+) + met(name~beta_GALACTOSE,loc~cyt) + met(name~beta_glucose,loc~cyt)    fwd_ALLOLACTOSE_DEG_beta, rvs_ALLOLACTOSE_DEG_beta
+  RXN_17726:                        prot(name~lacZ,up!+,dw!+) + met(name~CPD_3561,loc~cyt) + met(name~WATER,loc~cyt) <-> prot(name~lacZ,up!+,dw!+) + met(name~beta_GALACTOSE,loc~cyt) + met(name~Fructofuranose,loc~cyt)    fwd_RXN_17726, rvs_RXN_17726
+  RXN0_7219:                        prot(name~lacZ,up!+,dw!+) + met(name~CPD_3785,loc~cyt) + met(name~WATER,loc~cyt) <-> prot(name~lacZ,up!+,dw!+) + met(name~beta_GALACTOSE,loc~cyt) + met(name~D_ARABINOSE,loc~cyt)    fwd_RXN0_7219, rvs_RXN0_7219
+  GALACTOACETYLTRAN_RXN_galactose:  prot(name~lacA,up!+,dw!+) + met(name~beta_GALACTOSE,loc~cyt) + met(name~ACETYL_COA,loc~cyt) <-> prot(name~lacA,up!+,dw!+) + met(name~_6_Acetyl_beta_D_Galactose,loc~cyt) + met(name~CO_A,loc~cyt)    fwd_GALACTOACETYLTRAN_RXN_galactose, rvs_GALACTOACETYLTRAN_RXN_galactose
   complex_assembly_rule_0:          prot(name~lacZ,up,dw) + prot(name~lacZ,up,dw) <-> prot(name~lacZ,up!1,dw).prot(name~lacZ,up,dw!1)    fwd_complex_assembly_rule_0, rvs_complex_assembly_rule_0
-  complex_assembly_rule_1:          prot(name~lacZ,up!1,dw).prot(name~lacZ,up,dw!1) + prot(name~lacZ,up!2,dw).prot(name~lacZ,up,dw!2) <-> prot(name~lacZ,up!1,dw).prot(name~lacZ,up!2,dw!1).prot(name~lacZ,up!3,dw!2).prot(name~lacZ,up,dw!3)    fwd_complex_assembly_rule_1, rvs_complex_assembly_rule_1
+  complex_assembly_rule_1:          prot(name~lacZ,up!1,dw).prot(name~lacZ,up,dw!1) + prot(name~lacZ,up!2,dw).prot(name~lacZ,up,dw!2) <-> prot(name~lacZ,up!1,dw!4).prot(name~lacZ,up!2,dw!1).prot(name~lacZ,up!3,dw!2).prot(name~lacZ,up!4,dw!3)    fwd_complex_assembly_rule_1, rvs_complex_assembly_rule_1
   complex_assembly_rule_2:          prot(name~lacA,up,dw) + prot(name~lacA,up,dw) <-> prot(name~lacA,up!1,dw).prot(name~lacA,up,dw!1)    fwd_complex_assembly_rule_2, rvs_complex_assembly_rule_2
-  complex_assembly_rule_3:          prot(name~lacA,up,dw) + prot(name~lacA,up!1,dw).prot(name~lacA,up,dw!1) <-> prot(name~lacA,up!1,dw).prot(name~lacA,up!2,dw!1).prot(name~lacA,up,dw!2)    fwd_complex_assembly_rule_3, rvs_complex_assembly_rule_3
+  complex_assembly_rule_3:          prot(name~lacA,up,dw) + prot(name~lacA,up!1,dw).prot(name~lacA,up,dw!1) <-> prot(name~lacA,up!1,dw!3).prot(name~lacA,up!2,dw!1).prot(name~lacA,up!3,dw!2)    fwd_complex_assembly_rule_3, rvs_complex_assembly_rule_3
   docking_lacZ_pro4:                cplx(name~RNAP,dna) + dna(name~lacZ,type~pro4,prot) <-> cplx(name~RNAP,dna!1).dna(name~lacZ,type~pro4,prot!1)    fwd_docking_lacZ_pro4, rvs_docking_lacZ_pro4
   docking_lacZ_pro3:                cplx(name~RNAP,dna) + dna(name~lacZ,type~pro3,prot) <-> cplx(name~RNAP,dna!1).dna(name~lacZ,type~pro3,prot!1)    fwd_docking_lacZ_pro3, rvs_docking_lacZ_pro3
   docking_lacZ_pro2:                cplx(name~RNAP,dna) + dna(name~lacZ,type~pro2,prot) <-> cplx(name~RNAP,dna!1).dna(name~lacZ,type~pro2,prot!1)    fwd_docking_lacZ_pro2, rvs_docking_lacZ_pro2
