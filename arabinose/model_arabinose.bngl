@@ -8,9 +8,9 @@ begin parameters
   rvs_TRANS_RXN_10_alpha_af                    0.000000e+00
   fwd_TRANS_RXN_10_beta_af                     1.000000e+00
   rvs_TRANS_RXN_10_beta_af                     0.000000e+00
-  fwd_TRANS_RXN_10_alpha_ap                    1.000000e+00
+  fwd_TRANS_RXN_10_alpha_ap                    1.000000e-04
   rvs_TRANS_RXN_10_alpha_ap                    0.000000e+00
-  fwd_TRANS_RXN_10_beta_ap                     1.000000e+00
+  fwd_TRANS_RXN_10_beta_ap                     1.000000e-04
   rvs_TRANS_RXN_10_beta_ap                     0.000000e+00
   fwd_ABC_2_RXN_alpha_af                       1.000000e+00
   rvs_ABC_2_RXN_alpha_af                       0.000000e+00
@@ -47,7 +47,7 @@ begin parameters
   fwd_ProtProt_AssemblyRule_9                  1.000000e+00
   rvs_ProtProt_AssemblyRule_9                  0.000000e+00
   fwd_ProtProt_AssemblyRule_10                 1.000000e+00
-  rvs_ProtProt_AssemblyRule_10                 0.000000e+00
+  rvs_ProtProt_AssemblyRule_10                 1.000000e+00
   fwd_docking_araB_pro1_basal                  1.000000e-03
   rvs_docking_araB_pro1_basal                  1.000000e+00
   fwd_docking_araB_pro1                        1.000000e+00
@@ -158,6 +158,19 @@ begin parameters
   rvs_TranscriptionFactorMet_AssemblyRule_19   1.000000e+00
   fwd_TranscriptionFactorMet_AssemblyRule_20   1.000000e+00
   rvs_TranscriptionFactorMet_AssemblyRule_20   1.000000e+00
+  fwd_ProtMet_RuleAssembly_1                   1.000000e+00
+  rvs_ProtMet_RuleAssembly_1                   1.000000e+00
+  fwd_ProtMet_RuleAssembly_2                   1.000000e+00
+  rvs_ProtMet_RuleAssembly_2                   1.000000e+00
+  fwd_ProtMet_RuleAssembly_3                   1.000000e+00
+  rvs_ProtMet_RuleAssembly_3                   1.000000e+00
+  fwd_ProtMet_RuleAssembly_4                   1.000000e+00
+  rvs_ProtMet_RuleAssembly_4                   1.000000e+00
+  fwd_ProtMet_RuleAssembly_5                   1.000000e+00
+  rvs_ProtMet_RuleAssembly_5                   0.000000e+00
+  fwd_ProtMet_RuleAssembly_6                   1.000000e+00
+  rvs_ProtMet_RuleAssembly_6                   1.000000e+00
+  translocation                                1.000000e+00
 end parameters
 
 begin molecule types
@@ -228,8 +241,8 @@ begin reaction rules
   TRANS_RXN_10_beta_ap:                    prot(name~araE,loc~cyt) + met(name~PROTON,loc~per,prot) + met(name~beta_L_arabinopyranose,loc~per,prot) <-> prot(name~araE,loc~cyt) + met(name~PROTON,loc~cyt,prot) + met(name~beta_L_arabinopyranose,loc~cyt,prot)    fwd_TRANS_RXN_10_beta_ap, rvs_TRANS_RXN_10_beta_ap
   ABC_2_RXN_alpha_af:                      prot(name~araF,loc~cyt,up,dw!1).prot(name~araH,loc~cyt,up!1,dw!2).prot(name~araH,loc~cyt,up!2,dw!3).prot(name~araG,loc~cyt,up!3,dw!4).prot(name~araG,loc~cyt,up!4,dw) + met(name~WATER,loc~cyt,prot) + met(name~ATP,loc~cyt,prot) + met(name~alpha_L_arabinofuranose,loc~per,prot) + 0 <-> prot(name~araF,loc~cyt,up,dw!1).prot(name~araH,loc~cyt,up!1,dw!2).prot(name~araH,loc~cyt,up!2,dw!3).prot(name~araG,loc~cyt,up!3,dw!4).prot(name~araG,loc~cyt,up!4,dw) + met(name~Pi,loc~cyt,prot) + met(name~ADP,loc~cyt,prot) + met(name~PROTON,loc~cyt,prot) + met(name~alpha_L_arabinofuranose,loc~cyt,prot)    fwd_ABC_2_RXN_alpha_af, rvs_ABC_2_RXN_alpha_af
   ABC_2_RXN_beta_af:                       prot(name~araF,loc~cyt,up,dw!1).prot(name~araH,loc~cyt,up!1,dw!2).prot(name~araH,loc~cyt,up!2,dw!3).prot(name~araG,loc~cyt,up!3,dw!4).prot(name~araG,loc~cyt,up!4,dw) + met(name~WATER,loc~cyt,prot) + met(name~ATP,loc~cyt,prot) + met(name~beta_L_arabinofuranose,loc~per,prot) + 0 <-> prot(name~araF,loc~cyt,up,dw!1).prot(name~araH,loc~cyt,up!1,dw!2).prot(name~araH,loc~cyt,up!2,dw!3).prot(name~araG,loc~cyt,up!3,dw!4).prot(name~araG,loc~cyt,up!4,dw) + met(name~Pi,loc~cyt,prot) + met(name~ADP,loc~cyt,prot) + met(name~PROTON,loc~cyt,prot) + met(name~beta_L_arabinofuranose,loc~cyt,prot)    fwd_ABC_2_RXN_beta_af, rvs_ABC_2_RXN_beta_af
-  ABC_2_RXN_alpha_ap:                      prot(name~araF,loc~cyt,up,dw!1).prot(name~araH,loc~cyt,up!1,dw!2).prot(name~araH,loc~cyt,up!2,dw!3).prot(name~araG,loc~cyt,up!3,dw!4).prot(name~araG,loc~cyt,up!4,dw) + met(name~WATER,loc~cyt,prot) + met(name~ATP,loc~cyt,prot) + met(name~alpha_L_arabinopyranose,loc~per,prot) + 0 <-> prot(name~araF,loc~cyt,up,dw!1).prot(name~araH,loc~cyt,up!1,dw!2).prot(name~araH,loc~cyt,up!2,dw!3).prot(name~araG,loc~cyt,up!3,dw!4).prot(name~araG,loc~cyt,up!4,dw) + met(name~Pi,loc~cyt,prot) + met(name~ADP,loc~cyt,prot) + met(name~PROTON,loc~cyt,prot) + met(name~alpha_L_arabinopyranose,loc~cyt,prot)    fwd_ABC_2_RXN_alpha_ap, rvs_ABC_2_RXN_alpha_ap
-  ABC_2_RXN_beta_ap:                       prot(name~araF,loc~cyt,up,dw!1).prot(name~araH,loc~cyt,up!1,dw!2).prot(name~araH,loc~cyt,up!2,dw!3).prot(name~araG,loc~cyt,up!3,dw!4).prot(name~araG,loc~cyt,up!4,dw) + met(name~WATER,loc~cyt,prot) + met(name~ATP,loc~cyt,prot) + met(name~beta_L_arabinopyranose,loc~per,prot) + 0 <-> prot(name~araF,loc~cyt,up,dw!1).prot(name~araH,loc~cyt,up!1,dw!2).prot(name~araH,loc~cyt,up!2,dw!3).prot(name~araG,loc~cyt,up!3,dw!4).prot(name~araG,loc~cyt,up!4,dw) + met(name~Pi,loc~cyt,prot) + met(name~ADP,loc~cyt,prot) + met(name~PROTON,loc~cyt,prot) + met(name~beta_L_arabinopyranose,loc~cyt,prot)    fwd_ABC_2_RXN_beta_ap, rvs_ABC_2_RXN_beta_ap
+  ABC_2_RXN_alpha_ap:                      prot(name~araF,loc~per,met!5,up,dw!1).prot(name~araH,loc~cyt,up!1,dw!2).prot(name~araH,loc~cyt,up!2,dw!3).prot(name~araG,loc~cyt,up!3,dw!4).prot(name~araG,loc~cyt,met!6,up!4,dw).met(name~alpha_L_arabinopyranose,loc~per,prot!5).met(name~ATP,loc~cyt,prot!6) + met(name~WATER,loc~cyt,prot) + 0 <-> prot(name~araF,loc~per,met,up,dw!1).prot(name~araH,loc~cyt,up!1,dw!2).prot(name~araH,loc~cyt,up!2,dw!3).prot(name~araG,loc~cyt,up!3,dw!4).prot(name~araG,loc~cyt,met,up!4,dw) + met(name~alpha_L_arabinopyranose,loc~cyt,prot) + met(name~ADP,loc~cyt,prot) + met(name~Pi,loc~cyt,prot) + met(name~PROTON,loc~cyt,prot)    fwd_ABC_2_RXN_alpha_ap, rvs_ABC_2_RXN_alpha_ap
+  ABC_2_RXN_beta_ap:                       prot(name~araF,loc~per,met!5,up,dw!1).prot(name~araH,loc~cyt,up!1,dw!2).prot(name~araH,loc~cyt,up!2,dw!3).prot(name~araG,loc~cyt,up!3,dw!4).prot(name~araG,loc~cyt,met!6,up!4,dw).met(name~beta_L_arabinopyranose,loc~per,prot!5).met(name~ATP,loc~cyt,prot!6) + met(name~WATER,loc~cyt,prot) + 0 <-> prot(name~araF,loc~per,met,up,dw!1).prot(name~araH,loc~cyt,up!1,dw!2).prot(name~araH,loc~cyt,up!2,dw!3).prot(name~araG,loc~cyt,up!3,dw!4).prot(name~araG,loc~cyt,met,up!4,dw) + met(name~beta_L_arabinopyranose,loc~cyt,prot) + met(name~ADP,loc~cyt,prot) + met(name~Pi,loc~cyt,prot) + met(name~PROTON,loc~cyt,prot)    fwd_ABC_2_RXN_beta_ap, rvs_ABC_2_RXN_beta_ap
   ARABISOM_RXN_alpha_ap:                   prot(name~araA,loc~cyt) + met(name~alpha_L_arabinopyranose,loc~cyt,prot) <-> prot(name~araA,loc~cyt) + met(name~L_RIBULOSE,loc~cyt,prot)    fwd_ARABISOM_RXN_alpha_ap, rvs_ARABISOM_RXN_alpha_ap
   ARABISOM_RXN_beta_ap:                    prot(name~araA,loc~cyt) + met(name~beta_L_arabinopyranose,loc~cyt,prot) <-> prot(name~araA,loc~cyt) + met(name~L_RIBULOSE,loc~cyt,prot)    fwd_ARABISOM_RXN_beta_ap, rvs_ARABISOM_RXN_beta_ap
   RXN0_5116:                               prot(name~araB,loc~cyt) + met(name~L_RIBULOSE,loc~cyt,prot) + met(name~ATP,loc~cyt,prot) + 0 <-> prot(name~araB,loc~cyt) + met(name~PROTON,loc~cyt,prot) + met(name~L_RIBULOSE_5_P,loc~cyt,prot) + met(name~ADP,loc~cyt,prot)    fwd_RXN0_5116, rvs_RXN0_5116
@@ -243,7 +256,7 @@ begin reaction rules
   ProtProt_AssemblyRule_7:                 prot(name~araG,up,dw) + prot(name~araG,up,dw) <-> prot(name~araG,up,dw!1).prot(name~araG,up!1,dw)    fwd_ProtProt_AssemblyRule_7, rvs_ProtProt_AssemblyRule_7
   ProtProt_AssemblyRule_8:                 prot(name~araH,up,dw) + prot(name~araH,up,dw) <-> prot(name~araH,up,dw!1).prot(name~araH,up!1,dw)    fwd_ProtProt_AssemblyRule_8, rvs_ProtProt_AssemblyRule_8
   ProtProt_AssemblyRule_9:                 prot(name~araH,up,dw!2).prot(name~araH,up!2,dw) + prot(name~araG,up,dw!1).prot(name~araG,up!1,dw) <-> prot(name~araH,up,dw!1).prot(name~araH,up!1,dw!2).prot(name~araG,up!2,dw!3).prot(name~araG,up!3,dw)    fwd_ProtProt_AssemblyRule_9, rvs_ProtProt_AssemblyRule_9
-  ProtProt_AssemblyRule_10:                prot(name~araF,up,dw) + prot(name~araH,up,dw!1).prot(name~araH,up!1,dw!2).prot(name~araG,up!2,dw!3).prot(name~araG,up!3,dw) <-> prot(name~araF,up,dw!1).prot(name~araH,up!1,dw!2).prot(name~araH,up!2,dw!3).prot(name~araG,up!3,dw!4).prot(name~araG,up!4,dw)    fwd_ProtProt_AssemblyRule_10, rvs_ProtProt_AssemblyRule_10
+  ProtProt_AssemblyRule_10:                prot(name~araF,met!?,up,dw) + prot(name~araH,up,dw!1).prot(name~araH,up!1,dw!2).prot(name~araG,up!2,dw!3).prot(name~araG,met!+,up!3,dw) <-> prot(name~araF,met!?,up,dw!1).prot(name~araH,up!1,dw!2).prot(name~araH,up!2,dw!3).prot(name~araG,up!3,dw!4).prot(name~araG,met!+,up!4,dw)    fwd_ProtProt_AssemblyRule_10, rvs_ProtProt_AssemblyRule_10
   docking_araB_pro1_basal:                 cplx(name~RNAP,dna) + dna(name~araB,type~pro1,prot) <-> cplx(name~RNAP,dna!1).dna(name~araB,type~pro1,prot!1)    fwd_docking_araB_pro1_basal, rvs_docking_araB_pro1_basal
   docking_araB_pro1:                       cplx(name~RNAP,dna) + dna(name~araB,type~pro1,prot) + prot(name~araC,dna!3,met!2,up,dw!1).met(name~alpha_L_arabinopyranose,prot!2).dna(name~BS_56_72,prot!3,up!?,dw!?).prot(name~araC,dna!5,met!4,up!1,dw).met(name~alpha_L_arabinopyranose,prot!4).dna(name~BS_35_51,prot!5,up!?,dw!?) <-> cplx(name~RNAP,dna!6).dna(name~araB,type~pro1,prot!6) + prot(name~araC,dna!3,met!2,up,dw!1).met(name~alpha_L_arabinopyranose,prot!2).dna(name~BS_56_72,prot!3,up!?,dw!?).prot(name~araC,dna!5,met!4,up!1,dw).met(name~alpha_L_arabinopyranose,prot!4).dna(name~BS_35_51,prot!5,up!?,dw!?)    fwd_docking_araB_pro1, rvs_docking_araB_pro1
   falloff_araD_ter1:                       cplx(name~RNAP,dna!1).dna(name~araD,type~ter1,prot!1) -> cplx(name~RNAP,dna) + dna(name~araD,type~ter1,prot)    fwd_falloff_araD_ter1
@@ -319,6 +332,13 @@ begin reaction rules
   TranscriptionFactorMet_AssemblyRule_18:  prot(name~araC,dna,met!1,up,dw).met(name~alpha_L_arabinopyranose,prot!1) + dna(name~BS_57_73,prot,up!?,dw!?) <-> prot(name~araC,dna!2,met!1,up,dw).met(name~alpha_L_arabinopyranose,prot!1).dna(name~BS_57_73,prot!2,up!?,dw!?)    fwd_TranscriptionFactorMet_AssemblyRule_18, rvs_TranscriptionFactorMet_AssemblyRule_18
   TranscriptionFactorMet_AssemblyRule_19:  prot(name~araC,dna,met!1,up,dw).met(name~alpha_L_arabinopyranose,prot!1) + dna(name~BS_36_52,prot,up!?,dw!?) <-> prot(name~araC,dna!2,met!1,up,dw).met(name~alpha_L_arabinopyranose,prot!1).dna(name~BS_36_52,prot!2,up!?,dw!?)    fwd_TranscriptionFactorMet_AssemblyRule_19, rvs_TranscriptionFactorMet_AssemblyRule_19
   TranscriptionFactorMet_AssemblyRule_20:  prot(name~araC,dna!2,met!1,up,dw).met(name~alpha_L_arabinopyranose,prot!1).dna(name~BS_57_73,prot!2,up!?,dw!?) + prot(name~araC,dna!4,met!3,up,dw).met(name~alpha_L_arabinopyranose,prot!3).dna(name~BS_36_52,prot!4,up!?,dw!?) <-> prot(name~araC,dna!3,met!2,up,dw!1).met(name~alpha_L_arabinopyranose,prot!2).dna(name~BS_57_73,prot!3,up!?,dw!?).prot(name~araC,dna!5,met!4,up!1,dw).met(name~alpha_L_arabinopyranose,prot!4).dna(name~BS_36_52,prot!5,up!?,dw!?)    fwd_TranscriptionFactorMet_AssemblyRule_20, rvs_TranscriptionFactorMet_AssemblyRule_20
+  ProtMet_RuleAssembly_1:                  prot(name~araF,loc~per,met,up,dw) + met(name~alpha_L_arabinofuranose,loc~per,prot) <-> prot(name~araF,loc~per,met!1,up,dw).met(name~alpha_L_arabinofuranose,loc~per,prot!1)    fwd_ProtMet_RuleAssembly_1, rvs_ProtMet_RuleAssembly_1
+  ProtMet_RuleAssembly_2:                  prot(name~araF,loc~per,met,up,dw) + met(name~beta_L_arabinofuranose,loc~per,prot) <-> prot(name~araF,loc~per,met!1,up,dw).met(name~beta_L_arabinofuranose,loc~per,prot!1)    fwd_ProtMet_RuleAssembly_2, rvs_ProtMet_RuleAssembly_2
+  ProtMet_RuleAssembly_3:                  prot(name~araF,loc~per,met,up,dw) + met(name~alpha_L_arabinopyranose,loc~per,prot) <-> prot(name~araF,loc~per,met!1,up,dw).met(name~alpha_L_arabinopyranose,loc~per,prot!1)    fwd_ProtMet_RuleAssembly_3, rvs_ProtMet_RuleAssembly_3
+  ProtMet_RuleAssembly_4:                  prot(name~araF,loc~per,met,up,dw) + met(name~beta_L_arabinopyranose,loc~per,prot) <-> prot(name~araF,loc~per,met!1,up,dw).met(name~beta_L_arabinopyranose,loc~per,prot!1)    fwd_ProtMet_RuleAssembly_4, rvs_ProtMet_RuleAssembly_4
+  ProtMet_RuleAssembly_5:                  prot(name~araG,loc~cyt,met,up!?,dw!1).prot(name~araG,loc~cyt,met,up!1,dw) + met(name~ATP,loc~cyt,prot) <-> prot(name~araG,loc~cyt,met,up!?,dw!1).prot(name~araG,loc~cyt,met!2,up!1,dw).met(name~ATP,loc~cyt,prot!2)    fwd_ProtMet_RuleAssembly_5, rvs_ProtMet_RuleAssembly_5
+  ProtMet_RuleAssembly_6:                  prot(name~araC,loc~cyt,met,up,dw) + met(name~alpha_L_arabinopyranose,loc~cyt,prot) <-> prot(name~araC,loc~cyt,met!1,up,dw).met(name~alpha_L_arabinopyranose,loc~cyt,prot!1)    fwd_ProtMet_RuleAssembly_6, rvs_ProtMet_RuleAssembly_6
+  araF_translocation:                      prot(name~araF,loc~cyt) -> prot(name~araF,loc~per)    translocation
 end reaction rules
 
 end model
