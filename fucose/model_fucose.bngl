@@ -1,0 +1,444 @@
+begin model
+begin parameters
+  t0_ATP_cyt                     1.000000e+02
+  t0_ETR_Quinones_cyt            1.000000e+02
+  t0_NAD_cyt                     1.000000e+02
+  t0_NADH_cyt                    1.000000e+02
+  t0_PROTON_per                  1.000000e+02
+  t0_WATER_cyt                   1.000000e+02
+  t0_beta_L_fucopyranose_per     1.000000e+02
+  fwd_TRANS_RXN_20_alpha         1.000000e+00
+  rvs_TRANS_RXN_20_alpha         0.000000e+00
+  fwd_TRANS_RXN_20_beta          1.000000e+00
+  rvs_TRANS_RXN_20_beta          0.000000e+00
+  fwd_RXN0_7221_alpha_af         1.000000e+00
+  rvs_RXN0_7221_alpha_af         0.000000e+00
+  fwd_RXN0_7221_beta_af          1.000000e+00
+  rvs_RXN0_7221_beta_af          0.000000e+00
+  fwd_RXN0_7221_alpha_ap         1.000000e+00
+  rvs_RXN0_7221_alpha_ap         0.000000e+00
+  fwd_RXN0_7221_beta_ap          1.000000e+00
+  rvs_RXN0_7221_beta_ap          0.000000e+00
+  fwd_RXN0_7222_alpha            1.000000e+00
+  rvs_RXN0_7222_alpha            0.000000e+00
+  fwd_RXN0_7222_beta             1.000000e+00
+  rvs_RXN0_7222_beta             0.000000e+00
+  fwd_RXN0_5298                  1.000000e+00
+  rvs_RXN0_5298                  1.000000e+00
+  fwd_FUCISOM_RXN                1.000000e+00
+  rvs_FUCISOM_RXN                0.000000e+00
+  fwd_DARABISOM_RXN_alpha        1.000000e+00
+  rvs_DARABISOM_RXN_alpha        0.000000e+00
+  fwd_DARABISOM_RXN_beta         1.000000e+00
+  rvs_DARABISOM_RXN_beta         0.000000e+00
+  fwd_FUCULOKIN_RXN              1.000000e+00
+  rvs_FUCULOKIN_RXN              0.000000e+00
+  fwd_DARABKIN_RXN               1.000000e+00
+  rvs_DARABKIN_RXN               0.000000e+00
+  fwd_FUCPALDOL_RXN              1.000000e+00
+  rvs_FUCPALDOL_RXN              0.000000e+00
+  fwd_DARABALDOL_RXN             1.000000e+00
+  rvs_DARABALDOL_RXN             0.000000e+00
+  fwd_GLYCOLALDREDUCT_RXN        1.000000e+00
+  rvs_GLYCOLALDREDUCT_RXN        0.000000e+00
+  fwd_LACTALDREDUCT_RXN          1.000000e+00
+  rvs_LACTALDREDUCT_RXN          0.000000e+00
+  fwd_LACTALDDEHYDROG_RXN        1.000000e+00
+  rvs_LACTALDDEHYDROG_RXN        0.000000e+00
+  fwd_GLYCOLALD_DEHYDROG_RXN     1.000000e+00
+  rvs_GLYCOLALD_DEHYDROG_RXN     0.000000e+00
+  fwd_L_LACTDEHYDROGFMN_RXN      1.000000e+00
+  rvs_L_LACTDEHYDROGFMN_RXN      0.000000e+00
+  fwd_RXN0_7227                  1.000000e+00
+  rvs_RXN0_7227                  0.000000e+00
+  fwd_ProtProt_AssemblyRule_1    1.000000e+00
+  rvs_ProtProt_AssemblyRule_1    0.000000e+00
+  fwd_ProtProt_AssemblyRule_2    1.000000e+00
+  rvs_ProtProt_AssemblyRule_2    0.000000e+00
+  fwd_ProtProt_AssemblyRule_3    1.000000e+00
+  rvs_ProtProt_AssemblyRule_3    0.000000e+00
+  fwd_ProtProt_AssemblyRule_4    1.000000e+00
+  rvs_ProtProt_AssemblyRule_4    0.000000e+00
+  fwd_ProtProt_AssemblyRule_5    1.000000e+00
+  rvs_ProtProt_AssemblyRule_5    0.000000e+00
+  fwd_ProtProt_AssemblyRule_6    1.000000e+00
+  rvs_ProtProt_AssemblyRule_6    0.000000e+00
+  fwd_ProtProt_AssemblyRule_7    1.000000e+00
+  rvs_ProtProt_AssemblyRule_7    0.000000e+00
+  fwd_ProtProt_AssemblyRule_8    1.000000e+00
+  rvs_ProtProt_AssemblyRule_8    0.000000e+00
+  fwd_ProtProt_AssemblyRule_9    1.000000e+00
+  rvs_ProtProt_AssemblyRule_9    0.000000e+00
+  fwd_ProtProt_AssemblyRule_10   1.000000e+00
+  rvs_ProtProt_AssemblyRule_10   0.000000e+00
+  fwd_ProtProt_AssemblyRule_11   1.000000e+00
+  rvs_ProtProt_AssemblyRule_11   0.000000e+00
+  fwd_ProtProt_AssemblyRule_12   1.000000e+00
+  rvs_ProtProt_AssemblyRule_12   0.000000e+00
+  fwd_ProtProt_AssemblyRule_13   1.000000e+00
+  rvs_ProtProt_AssemblyRule_13   0.000000e+00
+  fwd_ProtProt_AssemblyRule_14   1.000000e+00
+  rvs_ProtProt_AssemblyRule_14   0.000000e+00
+  fwd_ProtProt_AssemblyRule_15   1.000000e+00
+  rvs_ProtProt_AssemblyRule_15   0.000000e+00
+  fwd_docking_fucP_pro1          1.000000e+00
+  rvs_docking_fucP_pro1          1.000000e+00
+  fwd_docking_fucU_pro1          1.000000e+00
+  rvs_docking_fucU_pro1          1.000000e+00
+  fwd_docking_fucR_pro1          1.000000e+00
+  rvs_docking_fucR_pro1          1.000000e+00
+  fwd_falloff_fucR_ter1          1.000000e+00
+  fwd_docking_fucA_pro1          1.000000e+00
+  rvs_docking_fucA_pro1          1.000000e+00
+  fwd_docking_fucO_pro1          1.000000e+00
+  rvs_docking_fucO_pro1          1.000000e+00
+  fwd_falloff_fucO_ter1          1.000000e+00
+  fwd_docking_aldA_pro1          1.000000e+00
+  rvs_docking_aldA_pro1          1.000000e+00
+  fwd_falloff_aldA_ter1          1.000000e+00
+  fwd_docking_lldP_pro1          1.000000e+00
+  rvs_docking_lldP_pro1          1.000000e+00
+  fwd_falloff_lldD_ter1          1.000000e+00
+  fwd_sliding_fucP_pro1          1.000000e+00
+  fwd_sliding_fucP_rbs           1.000000e+00
+  fwd_sliding_fucP_cds           1.000000e+00
+  fwd_sliding_fucI_rbs           1.000000e+00
+  fwd_sliding_fucI_cds           1.000000e+00
+  fwd_sliding_fucK_rbs           1.000000e+00
+  fwd_sliding_fucK_cds           1.000000e+00
+  fwd_sliding_fucU_pro1          1.000000e+00
+  fwd_sliding_fucU_rbs           1.000000e+00
+  fwd_sliding_fucU_cds           1.000000e+00
+  fwd_sliding_fucR_pro1          1.000000e+00
+  fwd_sliding_fucR_rbs           1.000000e+00
+  fwd_sliding_fucR_cds           1.000000e+00
+  fwd_sliding_fucA_pro1          1.000000e+00
+  fwd_sliding_fucA_rbs           1.000000e+00
+  fwd_sliding_fucA_cds           1.000000e+00
+  fwd_sliding_fucO_pro1          1.000000e+00
+  fwd_sliding_fucO_rbs           1.000000e+00
+  fwd_sliding_fucO_cds           1.000000e+00
+  fwd_sliding_aldA_pro1          1.000000e+00
+  fwd_sliding_aldA_rbs           1.000000e+00
+  fwd_sliding_aldA_cds           1.000000e+00
+  fwd_sliding_lldP_pro1          1.000000e+00
+  fwd_sliding_lldP_rbs           1.000000e+00
+  fwd_sliding_lldP_cds           1.000000e+00
+  fwd_sliding_lldR_rbs           1.000000e+00
+  fwd_sliding_lldR_cds           1.000000e+00
+  fwd_sliding_lldD_rbs           1.000000e+00
+  fwd_sliding_lldD_cds           1.000000e+00
+  fwd_dr_fucP_rbs                1.000000e+00
+  rvs_dr_fucP_rbs                1.000000e+00
+  fwd_dr_fucI_rbs                1.000000e+00
+  rvs_dr_fucI_rbs                1.000000e+00
+  fwd_dr_fucK_rbs                1.000000e+00
+  rvs_dr_fucK_rbs                1.000000e+00
+  fwd_dr_fucU_rbs                1.000000e+00
+  rvs_dr_fucU_rbs                1.000000e+00
+  fwd_dr_fucR_rbs                1.000000e+00
+  rvs_dr_fucR_rbs                1.000000e+00
+  fwd_fr_fucR_ter1               1.000000e+00
+  fwd_dr_fucA_rbs                1.000000e+00
+  rvs_dr_fucA_rbs                1.000000e+00
+  fwd_dr_fucO_rbs                1.000000e+00
+  rvs_dr_fucO_rbs                1.000000e+00
+  fwd_fr_fucO_ter1               1.000000e+00
+  fwd_dr_aldA_rbs                1.000000e+00
+  rvs_dr_aldA_rbs                1.000000e+00
+  fwd_fr_aldA_ter1               1.000000e+00
+  fwd_dr_lldP_rbs                1.000000e+00
+  rvs_dr_lldP_rbs                1.000000e+00
+  fwd_dr_lldR_rbs                1.000000e+00
+  rvs_dr_lldR_rbs                1.000000e+00
+  fwd_dr_lldD_rbs                1.000000e+00
+  rvs_dr_lldD_rbs                1.000000e+00
+  fwd_fr_lldD_ter1               1.000000e+00
+  fwd_sr_fucP_rbs                1.000000e+00
+  fwd_sr_fucP_cds                1.000000e+00
+  fwd_sr_fucI_rbs                1.000000e+00
+  fwd_sr_fucI_cds                1.000000e+00
+  fwd_sr_fucK_rbs                1.000000e+00
+  fwd_sr_fucK_cds                1.000000e+00
+  fwd_sr_fucU_pro1               1.000000e+00
+  fwd_sr_fucU_rbs                1.000000e+00
+  fwd_sr_fucU_cds                1.000000e+00
+  fwd_sr_fucR_pro1               1.000000e+00
+  fwd_sr_fucR_rbs                1.000000e+00
+  fwd_sr_fucR_cds                1.000000e+00
+  fwd_sr_fucA_pro1               1.000000e+00
+  fwd_sr_fucA_rbs                1.000000e+00
+  fwd_sr_fucA_cds                1.000000e+00
+  fwd_sr_fucO_pro1               1.000000e+00
+  fwd_sr_fucO_rbs                1.000000e+00
+  fwd_sr_fucO_cds                1.000000e+00
+  fwd_sr_aldA_pro1               1.000000e+00
+  fwd_sr_aldA_rbs                1.000000e+00
+  fwd_sr_aldA_cds                1.000000e+00
+  fwd_sr_lldP_pro1               1.000000e+00
+  fwd_sr_lldP_rbs                1.000000e+00
+  fwd_sr_lldP_cds                1.000000e+00
+  fwd_sr_lldR_rbs                1.000000e+00
+  fwd_sr_lldR_cds                1.000000e+00
+  fwd_sr_lldD_rbs                1.000000e+00
+  fwd_sr_lldD_cds                1.000000e+00
+  t0_fucPIKUR_operon             1.000000e+00
+  t0_fucAO_operon                1.000000e+00
+  t0_aldA_operon                 1.000000e+00
+  t0_lldPRD_operon               1.000000e+00
+  t0_RNAP                        1.000000e+01
+  t0_ribosome                    1.000000e+01
+  fwd_ProtMet_RuleAssembly_1     1.000000e+00
+  rvs_ProtMet_RuleAssembly_1     1.000000e+00
+  fwd_ProtMet_RuleAssembly_2     1.000000e+00
+  rvs_ProtMet_RuleAssembly_2     1.000000e+00
+  fwd_ProtMet_RuleAssembly_3     1.000000e+00
+  rvs_ProtMet_RuleAssembly_3     1.000000e+00
+end parameters
+
+begin molecule types
+  met(name~ADP~ATP~CPD_3564~D_RIBULOSE~D_RIBULOSE_1_P~DIHYDROXY_ACETONE_PHOSPHATE~ETR_Quinols~ETR_Quinones~FUCULOSE_1P~GLYCOL~GLYCOLALDEHYDE~GLYCOLLATE~L_FUCULOSE~L_LACTATE~LACTALD~NAD~NADH~PROPANE_1_2_DIOL~PROTON~PYRUVATE~WATER~_2_OXOBUTANOATE~alpha_D_arabinofuranose~alpha_D_arabinopyranose~alpha_L_fucopyranose~alpha_L_galactopyranose~beta_D_arabinofuranose~beta_D_arabinopyranose~beta_L_fucopyranose~beta_L_galactopyranose~FMN,loc~cyt~per~ex,prot)
+  dna(name~fucP~fucU~fucI~fucK~fucA~fucO~aldA~lldD~fucR~lldP~lldR,type~BS~pro1~pro2~pro3~pro4~rbs~cds~ter1~ter2,prot,rna,up,dw)
+  rna(name~fucP~fucU~fucI~fucK~fucA~fucO~aldA~lldD~fucR~lldP~lldR,type~BS~pro1~pro2~pro3~pro4~rbs~cds~ter1~ter2,dna,prot)
+  prot(name~fucP~fucU~fucI~fucK~fucA~fucO~aldA~lldD~fucR~lldP~lldR,loc~cyt~per~ex,dna,met,rna,up,dw)
+  cplx(name~RNAP~Ribosome,loc~cyt~per~ex,dna,prot,rna)
+end molecule types
+
+begin observables
+  Molecules obs_ADP_cyt                           met(name~ADP,loc~cyt,prot)
+  Molecules obs_ADP_per                           met(name~ADP,loc~per,prot)
+  Molecules obs_ADP_ex                            met(name~ADP,loc~ex,prot)
+  Molecules obs_ATP_cyt                           met(name~ATP,loc~cyt,prot)
+  Molecules obs_ATP_per                           met(name~ATP,loc~per,prot)
+  Molecules obs_ATP_ex                            met(name~ATP,loc~ex,prot)
+  Molecules obs_CPD_3564_cyt                      met(name~CPD_3564,loc~cyt,prot)
+  Molecules obs_CPD_3564_per                      met(name~CPD_3564,loc~per,prot)
+  Molecules obs_CPD_3564_ex                       met(name~CPD_3564,loc~ex,prot)
+  Molecules obs_D_RIBULOSE_cyt                    met(name~D_RIBULOSE,loc~cyt,prot)
+  Molecules obs_D_RIBULOSE_per                    met(name~D_RIBULOSE,loc~per,prot)
+  Molecules obs_D_RIBULOSE_ex                     met(name~D_RIBULOSE,loc~ex,prot)
+  Molecules obs_D_RIBULOSE_1_P_cyt                met(name~D_RIBULOSE_1_P,loc~cyt,prot)
+  Molecules obs_D_RIBULOSE_1_P_per                met(name~D_RIBULOSE_1_P,loc~per,prot)
+  Molecules obs_D_RIBULOSE_1_P_ex                 met(name~D_RIBULOSE_1_P,loc~ex,prot)
+  Molecules obs_DIHYDROXY_ACETONE_PHOSPHATE_cyt   met(name~DIHYDROXY_ACETONE_PHOSPHATE,loc~cyt,prot)
+  Molecules obs_DIHYDROXY_ACETONE_PHOSPHATE_per   met(name~DIHYDROXY_ACETONE_PHOSPHATE,loc~per,prot)
+  Molecules obs_DIHYDROXY_ACETONE_PHOSPHATE_ex    met(name~DIHYDROXY_ACETONE_PHOSPHATE,loc~ex,prot)
+  Molecules obs_ETR_Quinols_cyt                   met(name~ETR_Quinols,loc~cyt,prot)
+  Molecules obs_ETR_Quinols_per                   met(name~ETR_Quinols,loc~per,prot)
+  Molecules obs_ETR_Quinols_ex                    met(name~ETR_Quinols,loc~ex,prot)
+  Molecules obs_ETR_Quinones_cyt                  met(name~ETR_Quinones,loc~cyt,prot)
+  Molecules obs_ETR_Quinones_per                  met(name~ETR_Quinones,loc~per,prot)
+  Molecules obs_ETR_Quinones_ex                   met(name~ETR_Quinones,loc~ex,prot)
+  Molecules obs_FUCULOSE_1P_cyt                   met(name~FUCULOSE_1P,loc~cyt,prot)
+  Molecules obs_FUCULOSE_1P_per                   met(name~FUCULOSE_1P,loc~per,prot)
+  Molecules obs_FUCULOSE_1P_ex                    met(name~FUCULOSE_1P,loc~ex,prot)
+  Molecules obs_GLYCOL_cyt                        met(name~GLYCOL,loc~cyt,prot)
+  Molecules obs_GLYCOL_per                        met(name~GLYCOL,loc~per,prot)
+  Molecules obs_GLYCOL_ex                         met(name~GLYCOL,loc~ex,prot)
+  Molecules obs_GLYCOLALDEHYDE_cyt                met(name~GLYCOLALDEHYDE,loc~cyt,prot)
+  Molecules obs_GLYCOLALDEHYDE_per                met(name~GLYCOLALDEHYDE,loc~per,prot)
+  Molecules obs_GLYCOLALDEHYDE_ex                 met(name~GLYCOLALDEHYDE,loc~ex,prot)
+  Molecules obs_GLYCOLLATE_cyt                    met(name~GLYCOLLATE,loc~cyt,prot)
+  Molecules obs_GLYCOLLATE_per                    met(name~GLYCOLLATE,loc~per,prot)
+  Molecules obs_GLYCOLLATE_ex                     met(name~GLYCOLLATE,loc~ex,prot)
+  Molecules obs_L_FUCULOSE_cyt                    met(name~L_FUCULOSE,loc~cyt,prot)
+  Molecules obs_L_FUCULOSE_per                    met(name~L_FUCULOSE,loc~per,prot)
+  Molecules obs_L_FUCULOSE_ex                     met(name~L_FUCULOSE,loc~ex,prot)
+  Molecules obs_L_LACTATE_cyt                     met(name~L_LACTATE,loc~cyt,prot)
+  Molecules obs_L_LACTATE_per                     met(name~L_LACTATE,loc~per,prot)
+  Molecules obs_L_LACTATE_ex                      met(name~L_LACTATE,loc~ex,prot)
+  Molecules obs_LACTALD_cyt                       met(name~LACTALD,loc~cyt,prot)
+  Molecules obs_LACTALD_per                       met(name~LACTALD,loc~per,prot)
+  Molecules obs_LACTALD_ex                        met(name~LACTALD,loc~ex,prot)
+  Molecules obs_NAD_cyt                           met(name~NAD,loc~cyt,prot)
+  Molecules obs_NAD_per                           met(name~NAD,loc~per,prot)
+  Molecules obs_NAD_ex                            met(name~NAD,loc~ex,prot)
+  Molecules obs_NADH_cyt                          met(name~NADH,loc~cyt,prot)
+  Molecules obs_NADH_per                          met(name~NADH,loc~per,prot)
+  Molecules obs_NADH_ex                           met(name~NADH,loc~ex,prot)
+  Molecules obs_PROPANE_1_2_DIOL_cyt              met(name~PROPANE_1_2_DIOL,loc~cyt,prot)
+  Molecules obs_PROPANE_1_2_DIOL_per              met(name~PROPANE_1_2_DIOL,loc~per,prot)
+  Molecules obs_PROPANE_1_2_DIOL_ex               met(name~PROPANE_1_2_DIOL,loc~ex,prot)
+  Molecules obs_PROTON_cyt                        met(name~PROTON,loc~cyt,prot)
+  Molecules obs_PROTON_per                        met(name~PROTON,loc~per,prot)
+  Molecules obs_PROTON_ex                         met(name~PROTON,loc~ex,prot)
+  Molecules obs_PYRUVATE_cyt                      met(name~PYRUVATE,loc~cyt,prot)
+  Molecules obs_PYRUVATE_per                      met(name~PYRUVATE,loc~per,prot)
+  Molecules obs_PYRUVATE_ex                       met(name~PYRUVATE,loc~ex,prot)
+  Molecules obs_WATER_cyt                         met(name~WATER,loc~cyt,prot)
+  Molecules obs_WATER_per                         met(name~WATER,loc~per,prot)
+  Molecules obs_WATER_ex                          met(name~WATER,loc~ex,prot)
+  Molecules obs__2_OXOBUTANOATE_cyt               met(name~_2_OXOBUTANOATE,loc~cyt,prot)
+  Molecules obs__2_OXOBUTANOATE_per               met(name~_2_OXOBUTANOATE,loc~per,prot)
+  Molecules obs__2_OXOBUTANOATE_ex                met(name~_2_OXOBUTANOATE,loc~ex,prot)
+  Molecules obs_alpha_D_arabinofuranose_cyt       met(name~alpha_D_arabinofuranose,loc~cyt,prot)
+  Molecules obs_alpha_D_arabinofuranose_per       met(name~alpha_D_arabinofuranose,loc~per,prot)
+  Molecules obs_alpha_D_arabinofuranose_ex        met(name~alpha_D_arabinofuranose,loc~ex,prot)
+  Molecules obs_alpha_D_arabinopyranose_cyt       met(name~alpha_D_arabinopyranose,loc~cyt,prot)
+  Molecules obs_alpha_D_arabinopyranose_per       met(name~alpha_D_arabinopyranose,loc~per,prot)
+  Molecules obs_alpha_D_arabinopyranose_ex        met(name~alpha_D_arabinopyranose,loc~ex,prot)
+  Molecules obs_alpha_L_fucopyranose_cyt          met(name~alpha_L_fucopyranose,loc~cyt,prot)
+  Molecules obs_alpha_L_fucopyranose_per          met(name~alpha_L_fucopyranose,loc~per,prot)
+  Molecules obs_alpha_L_fucopyranose_ex           met(name~alpha_L_fucopyranose,loc~ex,prot)
+  Molecules obs_alpha_L_galactopyranose_cyt       met(name~alpha_L_galactopyranose,loc~cyt,prot)
+  Molecules obs_alpha_L_galactopyranose_per       met(name~alpha_L_galactopyranose,loc~per,prot)
+  Molecules obs_alpha_L_galactopyranose_ex        met(name~alpha_L_galactopyranose,loc~ex,prot)
+  Molecules obs_beta_D_arabinofuranose_cyt        met(name~beta_D_arabinofuranose,loc~cyt,prot)
+  Molecules obs_beta_D_arabinofuranose_per        met(name~beta_D_arabinofuranose,loc~per,prot)
+  Molecules obs_beta_D_arabinofuranose_ex         met(name~beta_D_arabinofuranose,loc~ex,prot)
+  Molecules obs_beta_D_arabinopyranose_cyt        met(name~beta_D_arabinopyranose,loc~cyt,prot)
+  Molecules obs_beta_D_arabinopyranose_per        met(name~beta_D_arabinopyranose,loc~per,prot)
+  Molecules obs_beta_D_arabinopyranose_ex         met(name~beta_D_arabinopyranose,loc~ex,prot)
+  Molecules obs_beta_L_fucopyranose_cyt           met(name~beta_L_fucopyranose,loc~cyt,prot)
+  Molecules obs_beta_L_fucopyranose_per           met(name~beta_L_fucopyranose,loc~per,prot)
+  Molecules obs_beta_L_fucopyranose_ex            met(name~beta_L_fucopyranose,loc~ex,prot)
+  Molecules obs_beta_L_galactopyranose_cyt        met(name~beta_L_galactopyranose,loc~cyt,prot)
+  Molecules obs_beta_L_galactopyranose_per        met(name~beta_L_galactopyranose,loc~per,prot)
+  Molecules obs_beta_L_galactopyranose_ex         met(name~beta_L_galactopyranose,loc~ex,prot)
+  Molecules obs_rnap                              cplx(name~RNAP,dna,rna)
+  Molecules obs_ribosome                          cplx(name~Ribosome,dna,rna)
+end observables
+
+begin species
+  met(name~ATP,loc~cyt,prot)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          t0_ATP_cyt
+  met(name~ETR_Quinones,loc~cyt,prot)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 t0_ETR_Quinones_cyt
+  met(name~NAD,loc~cyt,prot)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          t0_NAD_cyt
+  met(name~NADH,loc~cyt,prot)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         t0_NADH_cyt
+  met(name~PROTON,loc~per,prot)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       t0_PROTON_per
+  met(name~WATER,loc~cyt,prot)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        t0_WATER_cyt
+  met(name~beta_L_fucopyranose,loc~per,prot)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          t0_beta_L_fucopyranose_per
+  dna(name~fucP,type~pro1,prot,rna,up,dw!1).dna(name~fucP,type~rbs,prot,rna,up!1,dw!2).dna(name~fucP,type~cds,prot,rna,up!2,dw!3).dna(name~fucI,type~rbs,prot,rna,up!3,dw!4).dna(name~fucI,type~cds,prot,rna,up!4,dw!5).dna(name~fucK,type~rbs,prot,rna,up!5,dw!6).dna(name~fucK,type~cds,prot,rna,up!6,dw!7).dna(name~fucU,type~pro1,prot,rna,up!7,dw!8).dna(name~fucU,type~rbs,prot,rna,up!8,dw!9).dna(name~fucU,type~cds,prot,rna,up!9,dw!10).dna(name~fucR,type~pro1,prot,rna,up!10,dw!11).dna(name~fucR,type~rbs,prot,rna,up!11,dw!12).dna(name~fucR,type~cds,prot,rna,up!12,dw!13).dna(name~fucR,type~ter1,prot,rna,up!13,dw)   t0_fucPIKUR_operon
+  dna(name~fucA,type~pro1,prot,rna,up,dw!1).dna(name~fucA,type~rbs,prot,rna,up!1,dw!2).dna(name~fucA,type~cds,prot,rna,up!2,dw!3).dna(name~fucO,type~pro1,prot,rna,up!3,dw!4).dna(name~fucO,type~rbs,prot,rna,up!4,dw!5).dna(name~fucO,type~cds,prot,rna,up!5,dw!6).dna(name~fucO,type~ter1,prot,rna,up!6,dw)                                                                                                                                                                                                                                                                                                                         t0_fucAO_operon
+  dna(name~aldA,type~pro1,prot,rna,up,dw!1).dna(name~aldA,type~rbs,prot,rna,up!1,dw!2).dna(name~aldA,type~cds,prot,rna,up!2,dw!3).dna(name~aldA,type~ter1,prot,rna,up!3,dw)                                                                                                                                                                                                                                                                                                                                                                                                                                                           t0_aldA_operon
+  dna(name~lldP,type~pro1,prot,rna,up,dw!1).dna(name~lldP,type~rbs,prot,rna,up!1,dw!2).dna(name~lldP,type~cds,prot,rna,up!2,dw!3).dna(name~lldR,type~rbs,prot,rna,up!3,dw!4).dna(name~lldR,type~cds,prot,rna,up!4,dw!5).dna(name~lldD,type~rbs,prot,rna,up!5,dw!6).dna(name~lldD,type~cds,prot,rna,up!6,dw!7).dna(name~lldD,type~ter1,prot,rna,up!7,dw)                                                                                                                                                                                                                                                                               t0_lldPRD_operon
+  cplx(name~RNAP,loc~cyt,dna,prot,rna)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                t0_RNAP
+  cplx(name~Ribosome,loc~cyt,dna,prot,rna)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            t0_ribosome
+end species
+
+begin reaction rules
+  TRANS_RXN_20_alpha:        prot(name~fucP,loc~cyt) + met(name~alpha_L_fucopyranose,loc~per,prot) + met(name~PROTON,loc~per,prot) <-> prot(name~fucP,loc~cyt) + met(name~alpha_L_fucopyranose,loc~cyt,prot) + met(name~PROTON,loc~cyt,prot)    fwd_TRANS_RXN_20_alpha, rvs_TRANS_RXN_20_alpha
+  TRANS_RXN_20_beta:         prot(name~fucP,loc~cyt) + met(name~beta_L_fucopyranose,loc~per,prot) + met(name~PROTON,loc~per,prot) <-> prot(name~fucP,loc~cyt) + met(name~beta_L_fucopyranose,loc~cyt,prot) + met(name~PROTON,loc~cyt,prot)    fwd_TRANS_RXN_20_beta, rvs_TRANS_RXN_20_beta
+  RXN0_7221_alpha_af:        prot(name~fucP,loc~cyt) + met(name~alpha_D_arabinofuranose,loc~per,prot) + met(name~PROTON,loc~per,prot) <-> prot(name~fucP,loc~cyt) + met(name~alpha_D_arabinofuranose,loc~cyt,prot) + met(name~PROTON,loc~cyt,prot)    fwd_RXN0_7221_alpha_af, rvs_RXN0_7221_alpha_af
+  RXN0_7221_beta_af:         prot(name~fucP,loc~cyt) + met(name~beta_D_arabinofuranose,loc~per,prot) + met(name~PROTON,loc~per,prot) <-> prot(name~fucP,loc~cyt) + met(name~beta_D_arabinofuranose,loc~cyt,prot) + met(name~PROTON,loc~cyt,prot)    fwd_RXN0_7221_beta_af, rvs_RXN0_7221_beta_af
+  RXN0_7221_alpha_ap:        prot(name~fucP,loc~cyt) + met(name~alpha_D_arabinopyranose,loc~per,prot) + met(name~PROTON,loc~per,prot) <-> prot(name~fucP,loc~cyt) + met(name~alpha_D_arabinopyranose,loc~cyt,prot) + met(name~PROTON,loc~cyt,prot)    fwd_RXN0_7221_alpha_ap, rvs_RXN0_7221_alpha_ap
+  RXN0_7221_beta_ap:         prot(name~fucP,loc~cyt) + met(name~beta_D_arabinopyranose,loc~per,prot) + met(name~PROTON,loc~per,prot) <-> prot(name~fucP,loc~cyt) + met(name~beta_D_arabinopyranose,loc~cyt,prot) + met(name~PROTON,loc~cyt,prot)    fwd_RXN0_7221_beta_ap, rvs_RXN0_7221_beta_ap
+  RXN0_7222_alpha:           prot(name~fucP,loc~cyt) + met(name~alpha_L_galactopyranose,loc~per,prot) + met(name~PROTON,loc~per,prot) <-> prot(name~fucP,loc~cyt) + met(name~alpha_L_galactopyranose,loc~cyt,prot) + met(name~PROTON,loc~cyt,prot)    fwd_RXN0_7222_alpha, rvs_RXN0_7222_alpha
+  RXN0_7222_beta:            prot(name~fucP,loc~cyt) + met(name~beta_L_galactopyranose,loc~per,prot) + met(name~PROTON,loc~per,prot) <-> prot(name~fucP,loc~cyt) + met(name~beta_L_galactopyranose,loc~cyt,prot) + met(name~PROTON,loc~cyt,prot)    fwd_RXN0_7222_beta, rvs_RXN0_7222_beta
+  RXN0_5298:                 prot(name~fucU,loc~cyt) + met(name~alpha_L_fucopyranose,loc~cyt,prot) <-> prot(name~fucU,loc~cyt) + met(name~beta_L_fucopyranose,loc~cyt,prot)    fwd_RXN0_5298, rvs_RXN0_5298
+  FUCISOM_RXN:               prot(name~fucI,loc~cyt) + met(name~alpha_L_fucopyranose,loc~cyt,prot) <-> prot(name~fucI,loc~cyt) + met(name~L_FUCULOSE,loc~cyt,prot)    fwd_FUCISOM_RXN, rvs_FUCISOM_RXN
+  DARABISOM_RXN_alpha:       prot(name~fucI,loc~cyt) + met(name~alpha_D_arabinopyranose,loc~cyt,prot) <-> prot(name~fucI,loc~cyt) + met(name~D_RIBULOSE,loc~cyt,prot)    fwd_DARABISOM_RXN_alpha, rvs_DARABISOM_RXN_alpha
+  DARABISOM_RXN_beta:        prot(name~fucI,loc~cyt) + met(name~beta_D_arabinopyranose,loc~cyt,prot) <-> prot(name~fucI,loc~cyt) + met(name~D_RIBULOSE,loc~cyt,prot)    fwd_DARABISOM_RXN_beta, rvs_DARABISOM_RXN_beta
+  FUCULOKIN_RXN:             prot(name~fucK,loc~cyt) + met(name~L_FUCULOSE,loc~cyt,prot) + met(name~ATP,loc~cyt,prot) + 0 <-> prot(name~fucK,loc~cyt) + met(name~PROTON,loc~cyt,prot) + met(name~FUCULOSE_1P,loc~cyt,prot) + met(name~ADP,loc~cyt,prot)    fwd_FUCULOKIN_RXN, rvs_FUCULOKIN_RXN
+  DARABKIN_RXN:              prot(name~fucK,loc~cyt) + met(name~D_RIBULOSE,loc~cyt,prot) + met(name~ATP,loc~cyt,prot) + 0 <-> prot(name~fucK,loc~cyt) + met(name~PROTON,loc~cyt,prot) + met(name~D_RIBULOSE_1_P,loc~cyt,prot) + met(name~ADP,loc~cyt,prot)    fwd_DARABKIN_RXN, rvs_DARABKIN_RXN
+  FUCPALDOL_RXN:             prot(name~fucA,loc~cyt) + met(name~FUCULOSE_1P,loc~cyt,prot) + 0 <-> prot(name~fucA,loc~cyt) + met(name~LACTALD,loc~cyt,prot) + met(name~DIHYDROXY_ACETONE_PHOSPHATE,loc~cyt,prot)    fwd_FUCPALDOL_RXN, rvs_FUCPALDOL_RXN
+  DARABALDOL_RXN:            prot(name~fucA,loc~cyt) + met(name~D_RIBULOSE_1_P,loc~cyt,prot) + 0 <-> prot(name~fucA,loc~cyt) + met(name~GLYCOLALDEHYDE,loc~cyt,prot) + met(name~DIHYDROXY_ACETONE_PHOSPHATE,loc~cyt,prot)    fwd_DARABALDOL_RXN, rvs_DARABALDOL_RXN
+  GLYCOLALDREDUCT_RXN:       prot(name~fucO,loc~cyt) + met(name~NAD,loc~cyt,prot) + met(name~GLYCOL,loc~cyt,prot) + 0 <-> prot(name~fucO,loc~cyt) + met(name~PROTON,loc~cyt,prot) + met(name~GLYCOLALDEHYDE,loc~cyt,prot) + met(name~NADH,loc~cyt,prot)    fwd_GLYCOLALDREDUCT_RXN, rvs_GLYCOLALDREDUCT_RXN
+  LACTALDREDUCT_RXN:         prot(name~fucO,loc~cyt) + met(name~PROPANE_1_2_DIOL,loc~cyt,prot) + met(name~NAD,loc~cyt,prot) + 0 <-> prot(name~fucO,loc~cyt) + met(name~LACTALD,loc~cyt,prot) + met(name~NADH,loc~cyt,prot) + met(name~PROTON,loc~cyt,prot)    fwd_LACTALDREDUCT_RXN, rvs_LACTALDREDUCT_RXN
+  LACTALDDEHYDROG_RXN:       prot(name~aldA,loc~cyt) + met(name~WATER,loc~cyt,prot) + met(name~NAD,loc~cyt,prot) + met(name~LACTALD,loc~cyt,prot) <-> prot(name~aldA,loc~cyt) + met(name~PROTON,loc~cyt,prot) + met(name~NADH,loc~cyt,prot) + met(name~L_LACTATE,loc~cyt,prot)    fwd_LACTALDDEHYDROG_RXN, rvs_LACTALDDEHYDROG_RXN
+  GLYCOLALD_DEHYDROG_RXN:    prot(name~aldA,loc~cyt) + met(name~WATER,loc~cyt,prot) + met(name~NAD,loc~cyt,prot) + met(name~GLYCOLALDEHYDE,loc~cyt,prot) <-> prot(name~aldA,loc~cyt) + met(name~PROTON,loc~cyt,prot) + met(name~NADH,loc~cyt,prot) + met(name~GLYCOLLATE,loc~cyt,prot)    fwd_GLYCOLALD_DEHYDROG_RXN, rvs_GLYCOLALD_DEHYDROG_RXN
+  L_LACTDEHYDROGFMN_RXN:     prot(name~lldD,loc~cyt) + met(name~ETR_Quinones,loc~cyt,prot) + met(name~L_LACTATE,loc~cyt,prot) <-> prot(name~lldD,loc~cyt) + met(name~ETR_Quinols,loc~cyt,prot) + met(name~PYRUVATE,loc~cyt,prot)    fwd_L_LACTDEHYDROGFMN_RXN, rvs_L_LACTDEHYDROGFMN_RXN
+  RXN0_7227:                 prot(name~lldD,loc~cyt) + met(name~ETR_Quinones,loc~cyt,prot) + met(name~CPD_3564,loc~cyt,prot) <-> prot(name~lldD,loc~cyt) + met(name~ETR_Quinols,loc~cyt,prot) + met(name~_2_OXOBUTANOATE,loc~cyt,prot)    fwd_RXN0_7227, rvs_RXN0_7227
+  ProtProt_AssemblyRule_1:   prot(name~fucU,up,dw) + prot(name~fucU,up,dw) <-> prot(name~fucU,up,dw!1).prot(name~fucU,up!1,dw)    fwd_ProtProt_AssemblyRule_1, rvs_ProtProt_AssemblyRule_1
+  ProtProt_AssemblyRule_2:   prot(name~fucU,up,dw!2).prot(name~fucU,up!2,dw) + prot(name~fucU,up,dw!1).prot(name~fucU,up!1,dw) <-> prot(name~fucU,up,dw!1).prot(name~fucU,up!1,dw!2).prot(name~fucU,up!2,dw!3).prot(name~fucU,up!3,dw)    fwd_ProtProt_AssemblyRule_2, rvs_ProtProt_AssemblyRule_2
+  ProtProt_AssemblyRule_3:   prot(name~fucU,up,dw!4).prot(name~fucU,up!4,dw) + prot(name~fucU,up,dw!1).prot(name~fucU,up!1,dw!2).prot(name~fucU,up!2,dw!3).prot(name~fucU,up!3,dw) <-> prot(name~fucU,up,dw!1).prot(name~fucU,up!1,dw!2).prot(name~fucU,up!2,dw!3).prot(name~fucU,up!3,dw!4).prot(name~fucU,up!4,dw!5).prot(name~fucU,up!5,dw)    fwd_ProtProt_AssemblyRule_3, rvs_ProtProt_AssemblyRule_3
+  ProtProt_AssemblyRule_4:   prot(name~fucU,up,dw!6).prot(name~fucU,up!6,dw) + prot(name~fucU,up,dw!1).prot(name~fucU,up!1,dw!2).prot(name~fucU,up!2,dw!3).prot(name~fucU,up!3,dw!4).prot(name~fucU,up!4,dw!5).prot(name~fucU,up!5,dw) <-> prot(name~fucU,up,dw!1).prot(name~fucU,up!1,dw!2).prot(name~fucU,up!2,dw!3).prot(name~fucU,up!3,dw!4).prot(name~fucU,up!4,dw!5).prot(name~fucU,up!5,dw!6).prot(name~fucU,up!6,dw!7).prot(name~fucU,up!7,dw)    fwd_ProtProt_AssemblyRule_4, rvs_ProtProt_AssemblyRule_4
+  ProtProt_AssemblyRule_5:   prot(name~fucU,up,dw!8).prot(name~fucU,up!8,dw) + prot(name~fucU,up,dw!1).prot(name~fucU,up!1,dw!2).prot(name~fucU,up!2,dw!3).prot(name~fucU,up!3,dw!4).prot(name~fucU,up!4,dw!5).prot(name~fucU,up!5,dw!6).prot(name~fucU,up!6,dw!7).prot(name~fucU,up!7,dw) <-> prot(name~fucU,up,dw!1).prot(name~fucU,up!1,dw!2).prot(name~fucU,up!2,dw!3).prot(name~fucU,up!3,dw!4).prot(name~fucU,up!4,dw!5).prot(name~fucU,up!5,dw!6).prot(name~fucU,up!6,dw!7).prot(name~fucU,up!7,dw!8).prot(name~fucU,up!8,dw!9).prot(name~fucU,up!9,dw)    fwd_ProtProt_AssemblyRule_5, rvs_ProtProt_AssemblyRule_5
+  ProtProt_AssemblyRule_6:   prot(name~fucU,up,dw!4).prot(name~fucU,up!4,dw!5).prot(name~fucU,up!5,dw!6).prot(name~fucU,up!6,dw) + prot(name~fucU,up,dw!1).prot(name~fucU,up!1,dw!2).prot(name~fucU,up!2,dw!3).prot(name~fucU,up!3,dw) <-> prot(name~fucU,up,dw!1).prot(name~fucU,up!1,dw!2).prot(name~fucU,up!2,dw!3).prot(name~fucU,up!3,dw!4).prot(name~fucU,up!4,dw!5).prot(name~fucU,up!5,dw!6).prot(name~fucU,up!6,dw!7).prot(name~fucU,up!7,dw)    fwd_ProtProt_AssemblyRule_6, rvs_ProtProt_AssemblyRule_6
+  ProtProt_AssemblyRule_7:   prot(name~fucU,up,dw!6).prot(name~fucU,up!6,dw!7).prot(name~fucU,up!7,dw!8).prot(name~fucU,up!8,dw) + prot(name~fucU,up,dw!1).prot(name~fucU,up!1,dw!2).prot(name~fucU,up!2,dw!3).prot(name~fucU,up!3,dw!4).prot(name~fucU,up!4,dw!5).prot(name~fucU,up!5,dw) <-> prot(name~fucU,up,dw!1).prot(name~fucU,up!1,dw!2).prot(name~fucU,up!2,dw!3).prot(name~fucU,up!3,dw!4).prot(name~fucU,up!4,dw!5).prot(name~fucU,up!5,dw!6).prot(name~fucU,up!6,dw!7).prot(name~fucU,up!7,dw!8).prot(name~fucU,up!8,dw!9).prot(name~fucU,up!9,dw)    fwd_ProtProt_AssemblyRule_7, rvs_ProtProt_AssemblyRule_7
+  ProtProt_AssemblyRule_8:   prot(name~fucI,up,dw) + prot(name~fucI,up,dw) <-> prot(name~fucI,up,dw!1).prot(name~fucI,up!1,dw)    fwd_ProtProt_AssemblyRule_8, rvs_ProtProt_AssemblyRule_8
+  ProtProt_AssemblyRule_9:   prot(name~fucI,up,dw!2).prot(name~fucI,up!2,dw) + prot(name~fucI,up,dw!1).prot(name~fucI,up!1,dw) <-> prot(name~fucI,up,dw!1).prot(name~fucI,up!1,dw!2).prot(name~fucI,up!2,dw!3).prot(name~fucI,up!3,dw)    fwd_ProtProt_AssemblyRule_9, rvs_ProtProt_AssemblyRule_9
+  ProtProt_AssemblyRule_10:  prot(name~fucI,up,dw!4).prot(name~fucI,up!4,dw) + prot(name~fucI,up,dw!1).prot(name~fucI,up!1,dw!2).prot(name~fucI,up!2,dw!3).prot(name~fucI,up!3,dw) <-> prot(name~fucI,up,dw!1).prot(name~fucI,up!1,dw!2).prot(name~fucI,up!2,dw!3).prot(name~fucI,up!3,dw!4).prot(name~fucI,up!4,dw!5).prot(name~fucI,up!5,dw)    fwd_ProtProt_AssemblyRule_10, rvs_ProtProt_AssemblyRule_10
+  ProtProt_AssemblyRule_11:  prot(name~fucA,up,dw) + prot(name~fucA,up,dw) <-> prot(name~fucA,up,dw!1).prot(name~fucA,up!1,dw)    fwd_ProtProt_AssemblyRule_11, rvs_ProtProt_AssemblyRule_11
+  ProtProt_AssemblyRule_12:  prot(name~fucA,up,dw!2).prot(name~fucA,up!2,dw) + prot(name~fucA,up,dw!1).prot(name~fucA,up!1,dw) <-> prot(name~fucA,up,dw!1).prot(name~fucA,up!1,dw!2).prot(name~fucA,up!2,dw!3).prot(name~fucA,up!3,dw)    fwd_ProtProt_AssemblyRule_12, rvs_ProtProt_AssemblyRule_12
+  ProtProt_AssemblyRule_13:  prot(name~fucO,up,dw) + prot(name~fucO,up,dw) <-> prot(name~fucO,up,dw!1).prot(name~fucO,up!1,dw)    fwd_ProtProt_AssemblyRule_13, rvs_ProtProt_AssemblyRule_13
+  ProtProt_AssemblyRule_14:  prot(name~aldA,up,dw) + prot(name~aldA,up,dw) <-> prot(name~aldA,up,dw!1).prot(name~aldA,up!1,dw)    fwd_ProtProt_AssemblyRule_14, rvs_ProtProt_AssemblyRule_14
+  ProtProt_AssemblyRule_15:  prot(name~aldA,up,dw!2).prot(name~aldA,up!2,dw) + prot(name~aldA,up,dw!1).prot(name~aldA,up!1,dw) <-> prot(name~aldA,up,dw!1).prot(name~aldA,up!1,dw!2).prot(name~aldA,up!2,dw!3).prot(name~aldA,up!3,dw)    fwd_ProtProt_AssemblyRule_15, rvs_ProtProt_AssemblyRule_15
+  docking_fucP_pro1:         cplx(name~RNAP,dna) + dna(name~fucP,type~pro1,prot) <-> cplx(name~RNAP,dna!1).dna(name~fucP,type~pro1,prot!1)    fwd_docking_fucP_pro1, rvs_docking_fucP_pro1
+  docking_fucU_pro1:         cplx(name~RNAP,dna) + dna(name~fucU,type~pro1,prot) <-> cplx(name~RNAP,dna!1).dna(name~fucU,type~pro1,prot!1)    fwd_docking_fucU_pro1, rvs_docking_fucU_pro1
+  docking_fucR_pro1:         cplx(name~RNAP,dna) + dna(name~fucR,type~pro1,prot) <-> cplx(name~RNAP,dna!1).dna(name~fucR,type~pro1,prot!1)    fwd_docking_fucR_pro1, rvs_docking_fucR_pro1
+  falloff_fucR_ter1:         cplx(name~RNAP,dna!1).dna(name~fucR,type~ter1,prot!1) -> cplx(name~RNAP,dna) + dna(name~fucR,type~ter1,prot)    fwd_falloff_fucR_ter1
+  docking_fucA_pro1:         cplx(name~RNAP,dna) + dna(name~fucA,type~pro1,prot) <-> cplx(name~RNAP,dna!1).dna(name~fucA,type~pro1,prot!1)    fwd_docking_fucA_pro1, rvs_docking_fucA_pro1
+  docking_fucO_pro1:         cplx(name~RNAP,dna) + dna(name~fucO,type~pro1,prot) <-> cplx(name~RNAP,dna!1).dna(name~fucO,type~pro1,prot!1)    fwd_docking_fucO_pro1, rvs_docking_fucO_pro1
+  falloff_fucO_ter1:         cplx(name~RNAP,dna!1).dna(name~fucO,type~ter1,prot!1) -> cplx(name~RNAP,dna) + dna(name~fucO,type~ter1,prot)    fwd_falloff_fucO_ter1
+  docking_aldA_pro1:         cplx(name~RNAP,dna) + dna(name~aldA,type~pro1,prot) <-> cplx(name~RNAP,dna!1).dna(name~aldA,type~pro1,prot!1)    fwd_docking_aldA_pro1, rvs_docking_aldA_pro1
+  falloff_aldA_ter1:         cplx(name~RNAP,dna!1).dna(name~aldA,type~ter1,prot!1) -> cplx(name~RNAP,dna) + dna(name~aldA,type~ter1,prot)    fwd_falloff_aldA_ter1
+  docking_lldP_pro1:         cplx(name~RNAP,dna) + dna(name~lldP,type~pro1,prot) <-> cplx(name~RNAP,dna!1).dna(name~lldP,type~pro1,prot!1)    fwd_docking_lldP_pro1, rvs_docking_lldP_pro1
+  falloff_lldD_ter1:         cplx(name~RNAP,dna!1).dna(name~lldD,type~ter1,prot!1) -> cplx(name~RNAP,dna) + dna(name~lldD,type~ter1,prot)    fwd_falloff_lldD_ter1
+  sliding_fucP_pro1:         cplx(name~RNAP,dna!1).dna(name~fucP,type~pro1,prot!1) + 0 + dna(name~fucP,type~rbs,prot) -> cplx(name~RNAP,dna!1).dna(name~fucP,type~rbs,prot!1) + rna(name~fucP,type~rbs,dna,prot) + dna(name~fucP,type~pro1,prot)    fwd_sliding_fucP_pro1
+  sliding_fucP_rbs:          cplx(name~RNAP,dna!1).dna(name~fucP,type~rbs,prot!1) + 0 + dna(name~fucP,type~cds,prot) -> cplx(name~RNAP,dna!1).dna(name~fucP,type~cds,prot!1) + rna(name~fucP,type~cds,dna,prot) + dna(name~fucP,type~rbs,prot)    fwd_sliding_fucP_rbs
+  sliding_fucP_cds:          cplx(name~RNAP,dna!1).dna(name~fucP,type~cds,prot!1) + 0 + dna(name~fucI,type~rbs,prot) -> cplx(name~RNAP,dna!1).dna(name~fucI,type~rbs,prot!1) + rna(name~fucI,type~rbs,dna,prot) + dna(name~fucP,type~cds,prot)    fwd_sliding_fucP_cds
+  sliding_fucI_rbs:          cplx(name~RNAP,dna!1).dna(name~fucI,type~rbs,prot!1) + 0 + dna(name~fucI,type~cds,prot) -> cplx(name~RNAP,dna!1).dna(name~fucI,type~cds,prot!1) + rna(name~fucI,type~cds,dna,prot) + dna(name~fucI,type~rbs,prot)    fwd_sliding_fucI_rbs
+  sliding_fucI_cds:          cplx(name~RNAP,dna!1).dna(name~fucI,type~cds,prot!1) + 0 + dna(name~fucK,type~rbs,prot) -> cplx(name~RNAP,dna!1).dna(name~fucK,type~rbs,prot!1) + rna(name~fucK,type~rbs,dna,prot) + dna(name~fucI,type~cds,prot)    fwd_sliding_fucI_cds
+  sliding_fucK_rbs:          cplx(name~RNAP,dna!1).dna(name~fucK,type~rbs,prot!1) + 0 + dna(name~fucK,type~cds,prot) -> cplx(name~RNAP,dna!1).dna(name~fucK,type~cds,prot!1) + rna(name~fucK,type~cds,dna,prot) + dna(name~fucK,type~rbs,prot)    fwd_sliding_fucK_rbs
+  sliding_fucK_cds:          cplx(name~RNAP,dna!1).dna(name~fucK,type~cds,prot!1) + 0 + dna(name~fucU,type~pro1,prot) -> cplx(name~RNAP,dna!1).dna(name~fucU,type~pro1,prot!1) + rna(name~fucU,type~pro1,dna,prot) + dna(name~fucK,type~cds,prot)    fwd_sliding_fucK_cds
+  sliding_fucU_pro1:         cplx(name~RNAP,dna!1).dna(name~fucU,type~pro1,prot!1) + 0 + dna(name~fucU,type~rbs,prot) -> cplx(name~RNAP,dna!1).dna(name~fucU,type~rbs,prot!1) + rna(name~fucU,type~rbs,dna,prot) + dna(name~fucU,type~pro1,prot)    fwd_sliding_fucU_pro1
+  sliding_fucU_rbs:          cplx(name~RNAP,dna!1).dna(name~fucU,type~rbs,prot!1) + 0 + dna(name~fucU,type~cds,prot) -> cplx(name~RNAP,dna!1).dna(name~fucU,type~cds,prot!1) + rna(name~fucU,type~cds,dna,prot) + dna(name~fucU,type~rbs,prot)    fwd_sliding_fucU_rbs
+  sliding_fucU_cds:          cplx(name~RNAP,dna!1).dna(name~fucU,type~cds,prot!1) + 0 + dna(name~fucR,type~pro1,prot) -> cplx(name~RNAP,dna!1).dna(name~fucR,type~pro1,prot!1) + rna(name~fucR,type~pro1,dna,prot) + dna(name~fucU,type~cds,prot)    fwd_sliding_fucU_cds
+  sliding_fucR_pro1:         cplx(name~RNAP,dna!1).dna(name~fucR,type~pro1,prot!1) + 0 + dna(name~fucR,type~rbs,prot) -> cplx(name~RNAP,dna!1).dna(name~fucR,type~rbs,prot!1) + rna(name~fucR,type~rbs,dna,prot) + dna(name~fucR,type~pro1,prot)    fwd_sliding_fucR_pro1
+  sliding_fucR_rbs:          cplx(name~RNAP,dna!1).dna(name~fucR,type~rbs,prot!1) + 0 + dna(name~fucR,type~cds,prot) -> cplx(name~RNAP,dna!1).dna(name~fucR,type~cds,prot!1) + rna(name~fucR,type~cds,dna,prot) + dna(name~fucR,type~rbs,prot)    fwd_sliding_fucR_rbs
+  sliding_fucR_cds:          cplx(name~RNAP,dna!1).dna(name~fucR,type~cds,prot!1) + 0 + dna(name~fucR,type~ter1,prot) -> cplx(name~RNAP,dna!1).dna(name~fucR,type~ter1,prot!1) + rna(name~fucR,type~ter1,dna,prot) + dna(name~fucR,type~cds,prot)    fwd_sliding_fucR_cds
+  sliding_fucA_pro1:         cplx(name~RNAP,dna!1).dna(name~fucA,type~pro1,prot!1) + 0 + dna(name~fucA,type~rbs,prot) -> cplx(name~RNAP,dna!1).dna(name~fucA,type~rbs,prot!1) + rna(name~fucA,type~rbs,dna,prot) + dna(name~fucA,type~pro1,prot)    fwd_sliding_fucA_pro1
+  sliding_fucA_rbs:          cplx(name~RNAP,dna!1).dna(name~fucA,type~rbs,prot!1) + 0 + dna(name~fucA,type~cds,prot) -> cplx(name~RNAP,dna!1).dna(name~fucA,type~cds,prot!1) + rna(name~fucA,type~cds,dna,prot) + dna(name~fucA,type~rbs,prot)    fwd_sliding_fucA_rbs
+  sliding_fucA_cds:          cplx(name~RNAP,dna!1).dna(name~fucA,type~cds,prot!1) + 0 + dna(name~fucO,type~pro1,prot) -> cplx(name~RNAP,dna!1).dna(name~fucO,type~pro1,prot!1) + rna(name~fucO,type~pro1,dna,prot) + dna(name~fucA,type~cds,prot)    fwd_sliding_fucA_cds
+  sliding_fucO_pro1:         cplx(name~RNAP,dna!1).dna(name~fucO,type~pro1,prot!1) + 0 + dna(name~fucO,type~rbs,prot) -> cplx(name~RNAP,dna!1).dna(name~fucO,type~rbs,prot!1) + rna(name~fucO,type~rbs,dna,prot) + dna(name~fucO,type~pro1,prot)    fwd_sliding_fucO_pro1
+  sliding_fucO_rbs:          cplx(name~RNAP,dna!1).dna(name~fucO,type~rbs,prot!1) + 0 + dna(name~fucO,type~cds,prot) -> cplx(name~RNAP,dna!1).dna(name~fucO,type~cds,prot!1) + rna(name~fucO,type~cds,dna,prot) + dna(name~fucO,type~rbs,prot)    fwd_sliding_fucO_rbs
+  sliding_fucO_cds:          cplx(name~RNAP,dna!1).dna(name~fucO,type~cds,prot!1) + 0 + dna(name~fucO,type~ter1,prot) -> cplx(name~RNAP,dna!1).dna(name~fucO,type~ter1,prot!1) + rna(name~fucO,type~ter1,dna,prot) + dna(name~fucO,type~cds,prot)    fwd_sliding_fucO_cds
+  sliding_aldA_pro1:         cplx(name~RNAP,dna!1).dna(name~aldA,type~pro1,prot!1) + 0 + dna(name~aldA,type~rbs,prot) -> cplx(name~RNAP,dna!1).dna(name~aldA,type~rbs,prot!1) + rna(name~aldA,type~rbs,dna,prot) + dna(name~aldA,type~pro1,prot)    fwd_sliding_aldA_pro1
+  sliding_aldA_rbs:          cplx(name~RNAP,dna!1).dna(name~aldA,type~rbs,prot!1) + 0 + dna(name~aldA,type~cds,prot) -> cplx(name~RNAP,dna!1).dna(name~aldA,type~cds,prot!1) + rna(name~aldA,type~cds,dna,prot) + dna(name~aldA,type~rbs,prot)    fwd_sliding_aldA_rbs
+  sliding_aldA_cds:          cplx(name~RNAP,dna!1).dna(name~aldA,type~cds,prot!1) + 0 + dna(name~aldA,type~ter1,prot) -> cplx(name~RNAP,dna!1).dna(name~aldA,type~ter1,prot!1) + rna(name~aldA,type~ter1,dna,prot) + dna(name~aldA,type~cds,prot)    fwd_sliding_aldA_cds
+  sliding_lldP_pro1:         cplx(name~RNAP,dna!1).dna(name~lldP,type~pro1,prot!1) + 0 + dna(name~lldP,type~rbs,prot) -> cplx(name~RNAP,dna!1).dna(name~lldP,type~rbs,prot!1) + rna(name~lldP,type~rbs,dna,prot) + dna(name~lldP,type~pro1,prot)    fwd_sliding_lldP_pro1
+  sliding_lldP_rbs:          cplx(name~RNAP,dna!1).dna(name~lldP,type~rbs,prot!1) + 0 + dna(name~lldP,type~cds,prot) -> cplx(name~RNAP,dna!1).dna(name~lldP,type~cds,prot!1) + rna(name~lldP,type~cds,dna,prot) + dna(name~lldP,type~rbs,prot)    fwd_sliding_lldP_rbs
+  sliding_lldP_cds:          cplx(name~RNAP,dna!1).dna(name~lldP,type~cds,prot!1) + 0 + dna(name~lldR,type~rbs,prot) -> cplx(name~RNAP,dna!1).dna(name~lldR,type~rbs,prot!1) + rna(name~lldR,type~rbs,dna,prot) + dna(name~lldP,type~cds,prot)    fwd_sliding_lldP_cds
+  sliding_lldR_rbs:          cplx(name~RNAP,dna!1).dna(name~lldR,type~rbs,prot!1) + 0 + dna(name~lldR,type~cds,prot) -> cplx(name~RNAP,dna!1).dna(name~lldR,type~cds,prot!1) + rna(name~lldR,type~cds,dna,prot) + dna(name~lldR,type~rbs,prot)    fwd_sliding_lldR_rbs
+  sliding_lldR_cds:          cplx(name~RNAP,dna!1).dna(name~lldR,type~cds,prot!1) + 0 + dna(name~lldD,type~rbs,prot) -> cplx(name~RNAP,dna!1).dna(name~lldD,type~rbs,prot!1) + rna(name~lldD,type~rbs,dna,prot) + dna(name~lldR,type~cds,prot)    fwd_sliding_lldR_cds
+  sliding_lldD_rbs:          cplx(name~RNAP,dna!1).dna(name~lldD,type~rbs,prot!1) + 0 + dna(name~lldD,type~cds,prot) -> cplx(name~RNAP,dna!1).dna(name~lldD,type~cds,prot!1) + rna(name~lldD,type~cds,dna,prot) + dna(name~lldD,type~rbs,prot)    fwd_sliding_lldD_rbs
+  sliding_lldD_cds:          cplx(name~RNAP,dna!1).dna(name~lldD,type~cds,prot!1) + 0 + dna(name~lldD,type~ter1,prot) -> cplx(name~RNAP,dna!1).dna(name~lldD,type~ter1,prot!1) + rna(name~lldD,type~ter1,dna,prot) + dna(name~lldD,type~cds,prot)    fwd_sliding_lldD_cds
+  dr_fucP_rbs:               cplx(name~Ribosome,rna) + rna(name~fucP,type~rbs,prot) <-> cplx(name~Ribosome,rna!1).rna(name~fucP,type~rbs,prot!1)    fwd_dr_fucP_rbs, rvs_dr_fucP_rbs
+  dr_fucI_rbs:               cplx(name~Ribosome,rna) + rna(name~fucI,type~rbs,prot) <-> cplx(name~Ribosome,rna!1).rna(name~fucI,type~rbs,prot!1)    fwd_dr_fucI_rbs, rvs_dr_fucI_rbs
+  dr_fucK_rbs:               cplx(name~Ribosome,rna) + rna(name~fucK,type~rbs,prot) <-> cplx(name~Ribosome,rna!1).rna(name~fucK,type~rbs,prot!1)    fwd_dr_fucK_rbs, rvs_dr_fucK_rbs
+  dr_fucU_rbs:               cplx(name~Ribosome,rna) + rna(name~fucU,type~rbs,prot) <-> cplx(name~Ribosome,rna!1).rna(name~fucU,type~rbs,prot!1)    fwd_dr_fucU_rbs, rvs_dr_fucU_rbs
+  dr_fucR_rbs:               cplx(name~Ribosome,rna) + rna(name~fucR,type~rbs,prot) <-> cplx(name~Ribosome,rna!1).rna(name~fucR,type~rbs,prot!1)    fwd_dr_fucR_rbs, rvs_dr_fucR_rbs
+  fr_fucR_ter1:              cplx(name~Ribosome,rna!1).rna(name~fucR,type~ter1,prot!1) -> cplx(name~Ribosome,rna) + rna(name~fucR,type~ter1,prot)    fwd_fr_fucR_ter1
+  dr_fucA_rbs:               cplx(name~Ribosome,rna) + rna(name~fucA,type~rbs,prot) <-> cplx(name~Ribosome,rna!1).rna(name~fucA,type~rbs,prot!1)    fwd_dr_fucA_rbs, rvs_dr_fucA_rbs
+  dr_fucO_rbs:               cplx(name~Ribosome,rna) + rna(name~fucO,type~rbs,prot) <-> cplx(name~Ribosome,rna!1).rna(name~fucO,type~rbs,prot!1)    fwd_dr_fucO_rbs, rvs_dr_fucO_rbs
+  fr_fucO_ter1:              cplx(name~Ribosome,rna!1).rna(name~fucO,type~ter1,prot!1) -> cplx(name~Ribosome,rna) + rna(name~fucO,type~ter1,prot)    fwd_fr_fucO_ter1
+  dr_aldA_rbs:               cplx(name~Ribosome,rna) + rna(name~aldA,type~rbs,prot) <-> cplx(name~Ribosome,rna!1).rna(name~aldA,type~rbs,prot!1)    fwd_dr_aldA_rbs, rvs_dr_aldA_rbs
+  fr_aldA_ter1:              cplx(name~Ribosome,rna!1).rna(name~aldA,type~ter1,prot!1) -> cplx(name~Ribosome,rna) + rna(name~aldA,type~ter1,prot)    fwd_fr_aldA_ter1
+  dr_lldP_rbs:               cplx(name~Ribosome,rna) + rna(name~lldP,type~rbs,prot) <-> cplx(name~Ribosome,rna!1).rna(name~lldP,type~rbs,prot!1)    fwd_dr_lldP_rbs, rvs_dr_lldP_rbs
+  dr_lldR_rbs:               cplx(name~Ribosome,rna) + rna(name~lldR,type~rbs,prot) <-> cplx(name~Ribosome,rna!1).rna(name~lldR,type~rbs,prot!1)    fwd_dr_lldR_rbs, rvs_dr_lldR_rbs
+  dr_lldD_rbs:               cplx(name~Ribosome,rna) + rna(name~lldD,type~rbs,prot) <-> cplx(name~Ribosome,rna!1).rna(name~lldD,type~rbs,prot!1)    fwd_dr_lldD_rbs, rvs_dr_lldD_rbs
+  fr_lldD_ter1:              cplx(name~Ribosome,rna!1).rna(name~lldD,type~ter1,prot!1) -> cplx(name~Ribosome,rna) + rna(name~lldD,type~ter1,prot)    fwd_fr_lldD_ter1
+  sr_fucP_rbs:               cplx(name~Ribosome,rna!1).rna(name~fucP,type~rbs,prot!1) + 0 + rna(name~fucP,type~cds,prot) -> cplx(name~Ribosome,rna!1).rna(name~fucP,type~cds,prot!1) + prot(name~fucP,loc~cyt,dna,met,rna,up,dw) + rna(name~fucP,type~cds,prot)    fwd_sr_fucP_rbs
+  sr_fucP_cds:               cplx(name~Ribosome,rna!1).rna(name~fucP,type~cds,prot!1) + rna(name~fucI,type~rbs,prot) -> cplx(name~Ribosome,rna!1).rna(name~fucI,type~rbs,prot!1) + rna(name~fucP,type~cds,prot)    fwd_sr_fucP_cds
+  sr_fucI_rbs:               cplx(name~Ribosome,rna!1).rna(name~fucI,type~rbs,prot!1) + 0 + rna(name~fucI,type~cds,prot) -> cplx(name~Ribosome,rna!1).rna(name~fucI,type~cds,prot!1) + prot(name~fucI,loc~cyt,dna,met,rna,up,dw) + rna(name~fucI,type~cds,prot)    fwd_sr_fucI_rbs
+  sr_fucI_cds:               cplx(name~Ribosome,rna!1).rna(name~fucI,type~cds,prot!1) + rna(name~fucK,type~rbs,prot) -> cplx(name~Ribosome,rna!1).rna(name~fucK,type~rbs,prot!1) + rna(name~fucI,type~cds,prot)    fwd_sr_fucI_cds
+  sr_fucK_rbs:               cplx(name~Ribosome,rna!1).rna(name~fucK,type~rbs,prot!1) + 0 + rna(name~fucK,type~cds,prot) -> cplx(name~Ribosome,rna!1).rna(name~fucK,type~cds,prot!1) + prot(name~fucK,loc~cyt,dna,met,rna,up,dw) + rna(name~fucK,type~cds,prot)    fwd_sr_fucK_rbs
+  sr_fucK_cds:               cplx(name~Ribosome,rna!1).rna(name~fucK,type~cds,prot!1) + rna(name~fucU,type~pro1,prot) -> cplx(name~Ribosome,rna!1).rna(name~fucU,type~pro1,prot!1) + rna(name~fucK,type~cds,prot)    fwd_sr_fucK_cds
+  sr_fucU_pro1:              cplx(name~Ribosome,rna!1).rna(name~fucU,type~pro1,prot!1) + rna(name~fucU,type~rbs,prot) -> cplx(name~Ribosome,rna!1).rna(name~fucU,type~rbs,prot!1) + rna(name~fucU,type~pro1,prot)    fwd_sr_fucU_pro1
+  sr_fucU_rbs:               cplx(name~Ribosome,rna!1).rna(name~fucU,type~rbs,prot!1) + 0 + rna(name~fucU,type~cds,prot) -> cplx(name~Ribosome,rna!1).rna(name~fucU,type~cds,prot!1) + prot(name~fucU,loc~cyt,dna,met,rna,up,dw) + rna(name~fucU,type~cds,prot)    fwd_sr_fucU_rbs
+  sr_fucU_cds:               cplx(name~Ribosome,rna!1).rna(name~fucU,type~cds,prot!1) + rna(name~fucR,type~pro1,prot) -> cplx(name~Ribosome,rna!1).rna(name~fucR,type~pro1,prot!1) + rna(name~fucU,type~cds,prot)    fwd_sr_fucU_cds
+  sr_fucR_pro1:              cplx(name~Ribosome,rna!1).rna(name~fucR,type~pro1,prot!1) + rna(name~fucR,type~rbs,prot) -> cplx(name~Ribosome,rna!1).rna(name~fucR,type~rbs,prot!1) + rna(name~fucR,type~pro1,prot)    fwd_sr_fucR_pro1
+  sr_fucR_rbs:               cplx(name~Ribosome,rna!1).rna(name~fucR,type~rbs,prot!1) + 0 + rna(name~fucR,type~cds,prot) -> cplx(name~Ribosome,rna!1).rna(name~fucR,type~cds,prot!1) + prot(name~fucR,loc~cyt,dna,met,rna,up,dw) + rna(name~fucR,type~cds,prot)    fwd_sr_fucR_rbs
+  sr_fucR_cds:               cplx(name~Ribosome,rna!1).rna(name~fucR,type~cds,prot!1) + rna(name~fucR,type~ter1,prot) -> cplx(name~Ribosome,rna!1).rna(name~fucR,type~ter1,prot!1) + rna(name~fucR,type~cds,prot)    fwd_sr_fucR_cds
+  sr_fucA_pro1:              cplx(name~Ribosome,rna!1).rna(name~fucA,type~pro1,prot!1) + rna(name~fucA,type~rbs,prot) -> cplx(name~Ribosome,rna!1).rna(name~fucA,type~rbs,prot!1) + rna(name~fucA,type~pro1,prot)    fwd_sr_fucA_pro1
+  sr_fucA_rbs:               cplx(name~Ribosome,rna!1).rna(name~fucA,type~rbs,prot!1) + 0 + rna(name~fucA,type~cds,prot) -> cplx(name~Ribosome,rna!1).rna(name~fucA,type~cds,prot!1) + prot(name~fucA,loc~cyt,dna,met,rna,up,dw) + rna(name~fucA,type~cds,prot)    fwd_sr_fucA_rbs
+  sr_fucA_cds:               cplx(name~Ribosome,rna!1).rna(name~fucA,type~cds,prot!1) + rna(name~fucO,type~pro1,prot) -> cplx(name~Ribosome,rna!1).rna(name~fucO,type~pro1,prot!1) + rna(name~fucA,type~cds,prot)    fwd_sr_fucA_cds
+  sr_fucO_pro1:              cplx(name~Ribosome,rna!1).rna(name~fucO,type~pro1,prot!1) + rna(name~fucO,type~rbs,prot) -> cplx(name~Ribosome,rna!1).rna(name~fucO,type~rbs,prot!1) + rna(name~fucO,type~pro1,prot)    fwd_sr_fucO_pro1
+  sr_fucO_rbs:               cplx(name~Ribosome,rna!1).rna(name~fucO,type~rbs,prot!1) + 0 + rna(name~fucO,type~cds,prot) -> cplx(name~Ribosome,rna!1).rna(name~fucO,type~cds,prot!1) + prot(name~fucO,loc~cyt,dna,met,rna,up,dw) + rna(name~fucO,type~cds,prot)    fwd_sr_fucO_rbs
+  sr_fucO_cds:               cplx(name~Ribosome,rna!1).rna(name~fucO,type~cds,prot!1) + rna(name~fucO,type~ter1,prot) -> cplx(name~Ribosome,rna!1).rna(name~fucO,type~ter1,prot!1) + rna(name~fucO,type~cds,prot)    fwd_sr_fucO_cds
+  sr_aldA_pro1:              cplx(name~Ribosome,rna!1).rna(name~aldA,type~pro1,prot!1) + rna(name~aldA,type~rbs,prot) -> cplx(name~Ribosome,rna!1).rna(name~aldA,type~rbs,prot!1) + rna(name~aldA,type~pro1,prot)    fwd_sr_aldA_pro1
+  sr_aldA_rbs:               cplx(name~Ribosome,rna!1).rna(name~aldA,type~rbs,prot!1) + 0 + rna(name~aldA,type~cds,prot) -> cplx(name~Ribosome,rna!1).rna(name~aldA,type~cds,prot!1) + prot(name~aldA,loc~cyt,dna,met,rna,up,dw) + rna(name~aldA,type~cds,prot)    fwd_sr_aldA_rbs
+  sr_aldA_cds:               cplx(name~Ribosome,rna!1).rna(name~aldA,type~cds,prot!1) + rna(name~aldA,type~ter1,prot) -> cplx(name~Ribosome,rna!1).rna(name~aldA,type~ter1,prot!1) + rna(name~aldA,type~cds,prot)    fwd_sr_aldA_cds
+  sr_lldP_pro1:              cplx(name~Ribosome,rna!1).rna(name~lldP,type~pro1,prot!1) + rna(name~lldP,type~rbs,prot) -> cplx(name~Ribosome,rna!1).rna(name~lldP,type~rbs,prot!1) + rna(name~lldP,type~pro1,prot)    fwd_sr_lldP_pro1
+  sr_lldP_rbs:               cplx(name~Ribosome,rna!1).rna(name~lldP,type~rbs,prot!1) + 0 + rna(name~lldP,type~cds,prot) -> cplx(name~Ribosome,rna!1).rna(name~lldP,type~cds,prot!1) + prot(name~lldP,loc~cyt,dna,met,rna,up,dw) + rna(name~lldP,type~cds,prot)    fwd_sr_lldP_rbs
+  sr_lldP_cds:               cplx(name~Ribosome,rna!1).rna(name~lldP,type~cds,prot!1) + rna(name~lldR,type~rbs,prot) -> cplx(name~Ribosome,rna!1).rna(name~lldR,type~rbs,prot!1) + rna(name~lldP,type~cds,prot)    fwd_sr_lldP_cds
+  sr_lldR_rbs:               cplx(name~Ribosome,rna!1).rna(name~lldR,type~rbs,prot!1) + 0 + rna(name~lldR,type~cds,prot) -> cplx(name~Ribosome,rna!1).rna(name~lldR,type~cds,prot!1) + prot(name~lldR,loc~cyt,dna,met,rna,up,dw) + rna(name~lldR,type~cds,prot)    fwd_sr_lldR_rbs
+  sr_lldR_cds:               cplx(name~Ribosome,rna!1).rna(name~lldR,type~cds,prot!1) + rna(name~lldD,type~rbs,prot) -> cplx(name~Ribosome,rna!1).rna(name~lldD,type~rbs,prot!1) + rna(name~lldR,type~cds,prot)    fwd_sr_lldR_cds
+  sr_lldD_rbs:               cplx(name~Ribosome,rna!1).rna(name~lldD,type~rbs,prot!1) + 0 + rna(name~lldD,type~cds,prot) -> cplx(name~Ribosome,rna!1).rna(name~lldD,type~cds,prot!1) + prot(name~lldD,loc~cyt,dna,met,rna,up,dw) + rna(name~lldD,type~cds,prot)    fwd_sr_lldD_rbs
+  sr_lldD_cds:               cplx(name~Ribosome,rna!1).rna(name~lldD,type~cds,prot!1) + rna(name~lldD,type~ter1,prot) -> cplx(name~Ribosome,rna!1).rna(name~lldD,type~ter1,prot!1) + rna(name~lldD,type~cds,prot)    fwd_sr_lldD_cds
+  ProtMet_RuleAssembly_1:    prot(name~fucP,loc~cyt,met,up,dw) + met(name~FUCULOSE_1P,loc~cyt,prot) <-> prot(name~fucP,loc~cyt,met!1,up,dw).met(name~FUCULOSE_1P,loc~cyt,prot!1)    fwd_ProtMet_RuleAssembly_1, rvs_ProtMet_RuleAssembly_1
+  ProtMet_RuleAssembly_2:    prot(name~lldD,loc~cyt,met,up,dw) + met(name~FMN,loc~cyt,prot) <-> prot(name~lldD,loc~cyt,met!1,up,dw).met(name~FMN,loc~cyt,prot!1)    fwd_ProtMet_RuleAssembly_2, rvs_ProtMet_RuleAssembly_2
+  ProtMet_RuleAssembly_3:    prot(name~aldA,loc~cyt,met,up,dw) + met(name~NADH,loc~cyt,prot) <-> prot(name~aldA,loc~cyt,met!1,up,dw).met(name~NADH,loc~cyt,prot!1)    fwd_ProtMet_RuleAssembly_3, rvs_ProtMet_RuleAssembly_3
+end reaction rules
+
+end model
