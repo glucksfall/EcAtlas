@@ -2,11 +2,11 @@
 %agent: dna(name{araE araF araH araG araA araB araD araC BS_56_72 BS_83_104 BS_137_153 BS_62_78 BS_130_146 BS_35_51 BS_57_73 BS_267_283 BS_158_174 BS_109_125 BS_36_52 BS_83_99},type{BS pro1 pro2 pro3 pro4 rbs cds ter1 ter2},prot,rna,up,dw)
 %agent: rna(name{araE araF araH araG araA araB araD araC BS_56_72},type{BS pro1 pro2 pro3 pro4 rbs cds ter1 ter2},dna,prot)
 %agent: prot(name{araE araF araH araG araA araB araD araC},loc{cyt per ex},dna,met,rna,up,dw)
-%agent: cplx(name{RNAP Ribosome},dna,prot,rna)
+%agent: cplx(name{RNAP Ribosome},loc{cyt per ex},dna,prot,rna)
 
-%var: 't0_ATP_cyt' 2.000000e+02
+%var: 't0_ATP_cyt' 1.000000e+02
 %var: 't0_PROTON_per' 1.000000e+02
-%var: 't0_WATER_cyt' 2.000000e+02
+%var: 't0_WATER_cyt' 1.000000e+02
 %var: 't0_alpha_L_arabinopyranose_per' 1.000000e+02
 %var: 'fwd_TRANS_RXN_10_alpha_af' 1.000000e+00
 %var: 'rvs_TRANS_RXN_10_alpha_af' 0.000000e+00
@@ -52,15 +52,21 @@
 %var: 'rvs_ProtProt_AssemblyRule_9' 0.000000e+00
 %var: 'fwd_ProtProt_AssemblyRule_10' 1.000000e+00
 %var: 'rvs_ProtProt_AssemblyRule_10' 0.000000e+00
+%var: 'fwd_docking_araB_pro1_basal' 1.000000e-03
+%var: 'rvs_docking_araB_pro1_basal' 1.000000e+00
 %var: 'fwd_docking_araB_pro1' 1.000000e+00
 %var: 'rvs_docking_araB_pro1' 1.000000e+00
 %var: 'fwd_falloff_araD_ter1' 1.000000e+00
 %var: 'fwd_docking_araC_pro1' 1.000000e+00
 %var: 'rvs_docking_araC_pro1' 1.000000e+00
 %var: 'fwd_falloff_araC_ter1' 1.000000e+00
+%var: 'fwd_docking_araE_pro1_basal' 1.000000e-03
+%var: 'rvs_docking_araE_pro1_basal' 1.000000e+00
 %var: 'fwd_docking_araE_pro1' 1.000000e+00
 %var: 'rvs_docking_araE_pro1' 1.000000e+00
 %var: 'fwd_falloff_araE_ter1' 1.000000e+00
+%var: 'fwd_docking_araF_pro1_basal' 1.000000e-03
+%var: 'rvs_docking_araF_pro1_basal' 1.000000e+00
 %var: 'fwd_docking_araF_pro1' 1.000000e+00
 %var: 'rvs_docking_araF_pro1' 1.000000e+00
 %var: 'fwd_falloff_araH_ter1' 1.000000e+00
@@ -105,28 +111,57 @@
 %var: 'fwd_dr_araH_rbs' 1.000000e+00
 %var: 'rvs_dr_araH_rbs' 1.000000e+00
 %var: 'fwd_fr_araH_ter1' 1.000000e+00
-%var: 'fwd_sr_araB_rbs' 1.000000e+00
+%var: 'fwd_sr_araB_rbs' 1.000000e-02
 %var: 'fwd_sr_araB_cds' 1.000000e+00
-%var: 'fwd_sr_araA_rbs' 1.000000e+00
+%var: 'fwd_sr_araA_rbs' 1.000000e-02
 %var: 'fwd_sr_araA_cds' 1.000000e+00
-%var: 'fwd_sr_araD_rbs' 1.000000e+00
+%var: 'fwd_sr_araD_rbs' 1.000000e-02
 %var: 'fwd_sr_araD_cds' 1.000000e+00
-%var: 'fwd_sr_araC_rbs' 1.000000e+00
+%var: 'fwd_sr_araC_rbs' 1.000000e-02
 %var: 'fwd_sr_araC_cds' 1.000000e+00
-%var: 'fwd_sr_araE_rbs' 1.000000e+00
+%var: 'fwd_sr_araE_rbs' 1.000000e-02
 %var: 'fwd_sr_araE_cds' 1.000000e+00
-%var: 'fwd_sr_araF_rbs' 1.000000e+00
+%var: 'fwd_sr_araF_rbs' 1.000000e-02
 %var: 'fwd_sr_araF_cds' 1.000000e+00
-%var: 'fwd_sr_araG_rbs' 1.000000e+00
+%var: 'fwd_sr_araG_rbs' 1.000000e-02
 %var: 'fwd_sr_araG_cds' 1.000000e+00
-%var: 'fwd_sr_araH_rbs' 1.000000e+00
+%var: 'fwd_sr_araH_rbs' 1.000000e-02
 %var: 'fwd_sr_araH_cds' 1.000000e+00
-%var: 't0_araD_ter1_dna' 1.000000e+00
-%var: 't0_araC_ter1_dna' 1.000000e+00
-%var: 't0_araE_ter1_dna' 1.000000e+00
-%var: 't0_operon_araFGH' 1.000000e+00
-%var: 't0_RNAP' 1.000000e+00
-%var: 't0_ribosome' 1.000000e+00
+%var: 't0_araBAD_araC_operons' 1.000000e+00
+%var: 't0_araE_operon' 1.000000e+00
+%var: 't0_araFGH_operon' 1.000000e+00
+%var: 't0_RNAP' 1.000000e+01
+%var: 't0_ribosome' 1.000000e+01
+%var: 'fwd_TranscriptionFactorMet_AssemblyRule_1' 1.000000e+00
+%var: 'rvs_TranscriptionFactorMet_AssemblyRule_1' 1.000000e+00
+%var: 'fwd_TranscriptionFactorMet_AssemblyRule_2' 1.000000e+00
+%var: 'rvs_TranscriptionFactorMet_AssemblyRule_2' 1.000000e+00
+%var: 'fwd_TranscriptionFactorMet_AssemblyRule_3' 1.000000e+00
+%var: 'rvs_TranscriptionFactorMet_AssemblyRule_3' 1.000000e+00
+%var: 'fwd_TranscriptionFactorMet_AssemblyRule_5' 1.000000e+00
+%var: 'rvs_TranscriptionFactorMet_AssemblyRule_5' 1.000000e+00
+%var: 'fwd_TranscriptionFactorMet_AssemblyRule_6' 1.000000e+00
+%var: 'rvs_TranscriptionFactorMet_AssemblyRule_6' 1.000000e+00
+%var: 'fwd_TranscriptionFactorMet_AssemblyRule_7' 1.000000e+00
+%var: 'rvs_TranscriptionFactorMet_AssemblyRule_7' 1.000000e+00
+%var: 'fwd_TranscriptionFactorMet_AssemblyRule_8' 1.000000e+00
+%var: 'rvs_TranscriptionFactorMet_AssemblyRule_8' 1.000000e+00
+%var: 'fwd_TranscriptionFactorMet_AssemblyRule_13' 1.000000e+00
+%var: 'rvs_TranscriptionFactorMet_AssemblyRule_13' 0.000000e+00
+%var: 'fwd_TranscriptionFactorMet_AssemblyRule_14' 1.000000e+00
+%var: 'rvs_TranscriptionFactorMet_AssemblyRule_14' 0.000000e+00
+%var: 'fwd_TranscriptionFactorMet_AssemblyRule_15' 1.000000e+00
+%var: 'rvs_TranscriptionFactorMet_AssemblyRule_15' 0.000000e+00
+%var: 'fwd_TranscriptionFactorMet_AssemblyRule_16' 1.000000e+00
+%var: 'rvs_TranscriptionFactorMet_AssemblyRule_16' 0.000000e+00
+%var: 'fwd_TranscriptionFactorMet_AssemblyRule_17' 1.000000e+00
+%var: 'rvs_TranscriptionFactorMet_AssemblyRule_17' 1.000000e+00
+%var: 'fwd_TranscriptionFactorMet_AssemblyRule_18' 1.000000e+00
+%var: 'rvs_TranscriptionFactorMet_AssemblyRule_18' 1.000000e+00
+%var: 'fwd_TranscriptionFactorMet_AssemblyRule_19' 1.000000e+00
+%var: 'rvs_TranscriptionFactorMet_AssemblyRule_19' 1.000000e+00
+%var: 'fwd_TranscriptionFactorMet_AssemblyRule_20' 1.000000e+00
+%var: 'rvs_TranscriptionFactorMet_AssemblyRule_20' 1.000000e+00
 
 'TRANS_RXN_10_alpha_af' prot(name{araE}[.],loc{cyt}[.]),met(name{PROTON}[.],loc{per}[.],prot[.]),met(name{alpha_L_arabinofuranose}[.],loc{per}[.],prot[.]) -> prot(name{araE}[.],loc{cyt}[.]),met(name{PROTON}[.],loc{cyt}[.],prot[.]),met(name{alpha_L_arabinofuranose}[.],loc{cyt}[.],prot[.]) @ 'fwd_TRANS_RXN_10_alpha_af'
 'TRANS_RXN_10_alpha_af_rev' prot(name{araE}[.],loc{cyt}[.]),met(name{PROTON}[.],loc{cyt}[.],prot[.]),met(name{alpha_L_arabinofuranose}[.],loc{cyt}[.],prot[.]) -> prot(name{araE}[.],loc{cyt}[.]),met(name{PROTON}[.],loc{per}[.],prot[.]),met(name{alpha_L_arabinofuranose}[.],loc{per}[.],prot[.]) @ 'rvs_TRANS_RXN_10_alpha_af'
@@ -172,17 +207,23 @@
 'ProtProt_AssemblyRule_9_rev' prot(name{araH}[.],up[.],dw[1]),prot(name{araH}[.],up[1],dw[2]),prot(name{araG}[.],up[2],dw[3]),prot(name{araG}[.],up[3],dw[.]) -> prot(name{araH}[.],up[.],dw[2]),prot(name{araH}[.],up[2],dw[.]),prot(name{araG}[.],up[.],dw[1]),prot(name{araG}[.],up[1],dw[.]) @ 'rvs_ProtProt_AssemblyRule_9'
 'ProtProt_AssemblyRule_10' prot(name{araF}[.],up[.],dw[.]),prot(name{araH}[.],up[.],dw[1]),prot(name{araH}[.],up[1],dw[2]),prot(name{araG}[.],up[2],dw[3]),prot(name{araG}[.],up[3],dw[.]) -> prot(name{araF}[.],up[.],dw[1]),prot(name{araH}[.],up[1],dw[2]),prot(name{araH}[.],up[2],dw[3]),prot(name{araG}[.],up[3],dw[4]),prot(name{araG}[.],up[4],dw[.]) @ 'fwd_ProtProt_AssemblyRule_10'
 'ProtProt_AssemblyRule_10_rev' prot(name{araF}[.],up[.],dw[1]),prot(name{araH}[.],up[1],dw[2]),prot(name{araH}[.],up[2],dw[3]),prot(name{araG}[.],up[3],dw[4]),prot(name{araG}[.],up[4],dw[.]) -> prot(name{araF}[.],up[.],dw[.]),prot(name{araH}[.],up[.],dw[1]),prot(name{araH}[.],up[1],dw[2]),prot(name{araG}[.],up[2],dw[3]),prot(name{araG}[.],up[3],dw[.]) @ 'rvs_ProtProt_AssemblyRule_10'
-'docking_araB_pro1' cplx(name{RNAP}[.],dna[.]),dna(name{araB}[.],type{pro1}[.],prot[.]) -> cplx(name{RNAP}[.],dna[1]),dna(name{araB}[.],type{pro1}[.],prot[1]) @ 'fwd_docking_araB_pro1'
-'docking_araB_pro1_rev' cplx(name{RNAP}[.],dna[1]),dna(name{araB}[.],type{pro1}[.],prot[1]) -> cplx(name{RNAP}[.],dna[.]),dna(name{araB}[.],type{pro1}[.],prot[.]) @ 'rvs_docking_araB_pro1'
+'docking_araB_pro1_basal' cplx(name{RNAP}[.],dna[.]),dna(name{araB}[.],type{pro1}[.],prot[.]) -> cplx(name{RNAP}[.],dna[1]),dna(name{araB}[.],type{pro1}[.],prot[1]) @ 'fwd_docking_araB_pro1_basal'
+'docking_araB_pro1_basal_rev' cplx(name{RNAP}[.],dna[1]),dna(name{araB}[.],type{pro1}[.],prot[1]) -> cplx(name{RNAP}[.],dna[.]),dna(name{araB}[.],type{pro1}[.],prot[.]) @ 'rvs_docking_araB_pro1_basal'
+'docking_araB_pro1' cplx(name{RNAP}[.],dna[.]),dna(name{araB}[.],type{pro1}[.],prot[.]),prot(name{araC}[.],dna[3],met[2],up[.],dw[1]),met(name{alpha_L_arabinopyranose}[.],prot[2]),dna(name{BS_56_72}[.],prot[3],up[#],dw[#]),prot(name{araC}[.],dna[5],met[4],up[1],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[4]),dna(name{BS_35_51}[.],prot[5],up[#],dw[#]) -> cplx(name{RNAP}[.],dna[6]),dna(name{araB}[.],type{pro1}[.],prot[6]),prot(name{araC}[.],dna[3],met[2],up[.],dw[1]),met(name{alpha_L_arabinopyranose}[.],prot[2]),dna(name{BS_56_72}[.],prot[3],up[#],dw[#]),prot(name{araC}[.],dna[5],met[4],up[1],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[4]),dna(name{BS_35_51}[.],prot[5],up[#],dw[#]) @ 'fwd_docking_araB_pro1'
+'docking_araB_pro1_rev' cplx(name{RNAP}[.],dna[6]),dna(name{araB}[.],type{pro1}[.],prot[6]),prot(name{araC}[.],dna[3],met[2],up[.],dw[1]),met(name{alpha_L_arabinopyranose}[.],prot[2]),dna(name{BS_56_72}[.],prot[3],up[#],dw[#]),prot(name{araC}[.],dna[5],met[4],up[1],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[4]),dna(name{BS_35_51}[.],prot[5],up[#],dw[#]) -> cplx(name{RNAP}[.],dna[.]),dna(name{araB}[.],type{pro1}[.],prot[.]),prot(name{araC}[.],dna[3],met[2],up[.],dw[1]),met(name{alpha_L_arabinopyranose}[.],prot[2]),dna(name{BS_56_72}[.],prot[3],up[#],dw[#]),prot(name{araC}[.],dna[5],met[4],up[1],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[4]),dna(name{BS_35_51}[.],prot[5],up[#],dw[#]) @ 'rvs_docking_araB_pro1'
 'falloff_araD_ter1' cplx(name{RNAP}[.],dna[1]),dna(name{araD}[.],type{ter1}[.],prot[1]) -> cplx(name{RNAP}[.],dna[.]),dna(name{araD}[.],type{ter1}[.],prot[.]) @ 'fwd_falloff_araD_ter1'
 'docking_araC_pro1' cplx(name{RNAP}[.],dna[.]),dna(name{araC}[.],type{pro1}[.],prot[.]) -> cplx(name{RNAP}[.],dna[1]),dna(name{araC}[.],type{pro1}[.],prot[1]) @ 'fwd_docking_araC_pro1'
 'docking_araC_pro1_rev' cplx(name{RNAP}[.],dna[1]),dna(name{araC}[.],type{pro1}[.],prot[1]) -> cplx(name{RNAP}[.],dna[.]),dna(name{araC}[.],type{pro1}[.],prot[.]) @ 'rvs_docking_araC_pro1'
 'falloff_araC_ter1' cplx(name{RNAP}[.],dna[1]),dna(name{araC}[.],type{ter1}[.],prot[1]) -> cplx(name{RNAP}[.],dna[.]),dna(name{araC}[.],type{ter1}[.],prot[.]) @ 'fwd_falloff_araC_ter1'
-'docking_araE_pro1' cplx(name{RNAP}[.],dna[.]),dna(name{araE}[.],type{pro1}[.],prot[.]) -> cplx(name{RNAP}[.],dna[1]),dna(name{araE}[.],type{pro1}[.],prot[1]) @ 'fwd_docking_araE_pro1'
-'docking_araE_pro1_rev' cplx(name{RNAP}[.],dna[1]),dna(name{araE}[.],type{pro1}[.],prot[1]) -> cplx(name{RNAP}[.],dna[.]),dna(name{araE}[.],type{pro1}[.],prot[.]) @ 'rvs_docking_araE_pro1'
+'docking_araE_pro1_basal' cplx(name{RNAP}[.],dna[.]),dna(name{araE}[.],type{pro1}[.],prot[.]) -> cplx(name{RNAP}[.],dna[1]),dna(name{araE}[.],type{pro1}[.],prot[1]) @ 'fwd_docking_araE_pro1_basal'
+'docking_araE_pro1_basal_rev' cplx(name{RNAP}[.],dna[1]),dna(name{araE}[.],type{pro1}[.],prot[1]) -> cplx(name{RNAP}[.],dna[.]),dna(name{araE}[.],type{pro1}[.],prot[.]) @ 'rvs_docking_araE_pro1_basal'
+'docking_araE_pro1' cplx(name{RNAP}[.],dna[.]),dna(name{araE}[.],type{pro1}[.],prot[.]),prot(name{araC}[.],dna[3],met[2],up[.],dw[1]),met(name{alpha_L_arabinopyranose}[.],prot[2]),dna(name{BS_57_73}[.],prot[3],up[#],dw[#]),prot(name{araC}[.],dna[5],met[4],up[1],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[4]),dna(name{BS_36_52}[.],prot[5],up[#],dw[#]) -> cplx(name{RNAP}[.],dna[6]),dna(name{araE}[.],type{pro1}[.],prot[6]),prot(name{araC}[.],dna[3],met[2],up[.],dw[1]),met(name{alpha_L_arabinopyranose}[.],prot[2]),dna(name{BS_57_73}[.],prot[3],up[#],dw[#]),prot(name{araC}[.],dna[5],met[4],up[1],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[4]),dna(name{BS_36_52}[.],prot[5],up[#],dw[#]) @ 'fwd_docking_araE_pro1'
+'docking_araE_pro1_rev' cplx(name{RNAP}[.],dna[6]),dna(name{araE}[.],type{pro1}[.],prot[6]),prot(name{araC}[.],dna[3],met[2],up[.],dw[1]),met(name{alpha_L_arabinopyranose}[.],prot[2]),dna(name{BS_57_73}[.],prot[3],up[#],dw[#]),prot(name{araC}[.],dna[5],met[4],up[1],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[4]),dna(name{BS_36_52}[.],prot[5],up[#],dw[#]) -> cplx(name{RNAP}[.],dna[.]),dna(name{araE}[.],type{pro1}[.],prot[.]),prot(name{araC}[.],dna[3],met[2],up[.],dw[1]),met(name{alpha_L_arabinopyranose}[.],prot[2]),dna(name{BS_57_73}[.],prot[3],up[#],dw[#]),prot(name{araC}[.],dna[5],met[4],up[1],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[4]),dna(name{BS_36_52}[.],prot[5],up[#],dw[#]) @ 'rvs_docking_araE_pro1'
 'falloff_araE_ter1' cplx(name{RNAP}[.],dna[1]),dna(name{araE}[.],type{ter1}[.],prot[1]) -> cplx(name{RNAP}[.],dna[.]),dna(name{araE}[.],type{ter1}[.],prot[.]) @ 'fwd_falloff_araE_ter1'
-'docking_araF_pro1' cplx(name{RNAP}[.],dna[.]),dna(name{araF}[.],type{pro1}[.],prot[.]) -> cplx(name{RNAP}[.],dna[1]),dna(name{araF}[.],type{pro1}[.],prot[1]) @ 'fwd_docking_araF_pro1'
-'docking_araF_pro1_rev' cplx(name{RNAP}[.],dna[1]),dna(name{araF}[.],type{pro1}[.],prot[1]) -> cplx(name{RNAP}[.],dna[.]),dna(name{araF}[.],type{pro1}[.],prot[.]) @ 'rvs_docking_araF_pro1'
+'docking_araF_pro1_basal' cplx(name{RNAP}[.],dna[.]),dna(name{araF}[.],type{pro1}[.],prot[.]) -> cplx(name{RNAP}[.],dna[1]),dna(name{araF}[.],type{pro1}[.],prot[1]) @ 'fwd_docking_araF_pro1_basal'
+'docking_araF_pro1_basal_rev' cplx(name{RNAP}[.],dna[1]),dna(name{araF}[.],type{pro1}[.],prot[1]) -> cplx(name{RNAP}[.],dna[.]),dna(name{araF}[.],type{pro1}[.],prot[.]) @ 'rvs_docking_araF_pro1_basal'
+'docking_araF_pro1' cplx(name{RNAP}[.],dna[.]),dna(name{araF}[.],type{pro1}[.],prot[.]),prot(name{araC}[.],dna[3],met[2],up[.],dw[1]),met(name{alpha_L_arabinopyranose}[.],prot[2]),dna(name{BS_83_99}[.],prot[3],up[#],dw[#]),prot(name{araC}[.],dna[5],met[4],up[1],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[4]),dna(name{BS_62_78}[.],prot[5],up[#],dw[#]) -> cplx(name{RNAP}[.],dna[6]),dna(name{araF}[.],type{pro1}[.],prot[6]),prot(name{araC}[.],dna[3],met[2],up[.],dw[1]),met(name{alpha_L_arabinopyranose}[.],prot[2]),dna(name{BS_83_99}[.],prot[3],up[#],dw[#]),prot(name{araC}[.],dna[5],met[4],up[1],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[4]),dna(name{BS_62_78}[.],prot[5],up[#],dw[#]) @ 'fwd_docking_araF_pro1'
+'docking_araF_pro1_rev' cplx(name{RNAP}[.],dna[6]),dna(name{araF}[.],type{pro1}[.],prot[6]),prot(name{araC}[.],dna[3],met[2],up[.],dw[1]),met(name{alpha_L_arabinopyranose}[.],prot[2]),dna(name{BS_83_99}[.],prot[3],up[#],dw[#]),prot(name{araC}[.],dna[5],met[4],up[1],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[4]),dna(name{BS_62_78}[.],prot[5],up[#],dw[#]) -> cplx(name{RNAP}[.],dna[.]),dna(name{araF}[.],type{pro1}[.],prot[.]),prot(name{araC}[.],dna[3],met[2],up[.],dw[1]),met(name{alpha_L_arabinopyranose}[.],prot[2]),dna(name{BS_83_99}[.],prot[3],up[#],dw[#]),prot(name{araC}[.],dna[5],met[4],up[1],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[4]),dna(name{BS_62_78}[.],prot[5],up[#],dw[#]) @ 'rvs_docking_araF_pro1'
 'falloff_araH_ter1' cplx(name{RNAP}[.],dna[1]),dna(name{araH}[.],type{ter1}[.],prot[1]) -> cplx(name{RNAP}[.],dna[.]),dna(name{araH}[.],type{ter1}[.],prot[.]) @ 'fwd_falloff_araH_ter1'
 'sliding_araB_pro1' cplx(name{RNAP}[.],dna[1]),dna(name{araB}[.],type{pro1}[.],prot[1]),.,dna(name{araB}[.],type{rbs}[.],prot[.]) -> cplx(name{RNAP}[.],dna[1]),dna(name{araB}[.],type{rbs}[.],prot[1]),rna(name{araB}[.],type{rbs}[.],dna[.],prot[.]),dna(name{araB}[.],type{pro1}[.],prot[.]) @ 'fwd_sliding_araB_pro1'
 'sliding_araB_rbs' cplx(name{RNAP}[.],dna[1]),dna(name{araB}[.],type{rbs}[.],prot[1]),.,dna(name{araB}[.],type{cds}[.],prot[.]) -> cplx(name{RNAP}[.],dna[1]),dna(name{araB}[.],type{cds}[.],prot[1]),rna(name{araB}[.],type{cds}[.],dna[.],prot[.]),dna(name{araB}[.],type{rbs}[.],prot[.]) @ 'fwd_sliding_araB_rbs'
@@ -241,6 +282,36 @@
 'sr_araG_cds' cplx(name{Ribosome}[.],rna[1]),rna(name{araG}[.],type{cds}[.],prot[1]),rna(name{araH}[.],type{rbs}[.],prot[.]) -> cplx(name{Ribosome}[.],rna[1]),rna(name{araH}[.],type{rbs}[.],prot[1]),rna(name{araG}[.],type{cds}[.],prot[.]) @ 'fwd_sr_araG_cds'
 'sr_araH_rbs' cplx(name{Ribosome}[.],rna[1]),rna(name{araH}[.],type{rbs}[.],prot[1]),.,rna(name{araH}[.],type{cds}[.],prot[.]) -> cplx(name{Ribosome}[.],rna[1]),rna(name{araH}[.],type{cds}[.],prot[1]),prot(name{araH}[.],loc{cyt}[.],dna[.],met[.],rna[.],up[.],dw[.]),rna(name{araH}[.],type{cds}[.],prot[.]) @ 'fwd_sr_araH_rbs'
 'sr_araH_cds' cplx(name{Ribosome}[.],rna[1]),rna(name{araH}[.],type{cds}[.],prot[1]),rna(name{araH}[.],type{ter1}[.],prot[.]) -> cplx(name{Ribosome}[.],rna[1]),rna(name{araH}[.],type{ter1}[.],prot[1]),rna(name{araH}[.],type{cds}[.],prot[.]) @ 'fwd_sr_araH_cds'
+'TranscriptionFactorMet_AssemblyRule_1' prot(name{araC}[.],dna[.],met[.],up[.],dw[.]),dna(name{BS_56_72}[.],prot[.],up[#],dw[#]) -> prot(name{araC}[.],dna[1],met[.],up[.],dw[.]),dna(name{BS_56_72}[.],prot[1],up[#],dw[#]) @ 'fwd_TranscriptionFactorMet_AssemblyRule_1'
+'TranscriptionFactorMet_AssemblyRule_1_rev' prot(name{araC}[.],dna[1],met[.],up[.],dw[.]),dna(name{BS_56_72}[.],prot[1],up[#],dw[#]) -> prot(name{araC}[.],dna[.],met[.],up[.],dw[.]),dna(name{BS_56_72}[.],prot[.],up[#],dw[#]) @ 'rvs_TranscriptionFactorMet_AssemblyRule_1'
+'TranscriptionFactorMet_AssemblyRule_2' prot(name{araC}[.],dna[.],met[.],up[.],dw[.]),dna(name{BS_267_283}[.],prot[.],up[#],dw[#]) -> prot(name{araC}[.],dna[1],met[.],up[.],dw[.]),dna(name{BS_267_283}[.],prot[1],up[#],dw[#]) @ 'fwd_TranscriptionFactorMet_AssemblyRule_2'
+'TranscriptionFactorMet_AssemblyRule_2_rev' prot(name{araC}[.],dna[1],met[.],up[.],dw[.]),dna(name{BS_267_283}[.],prot[1],up[#],dw[#]) -> prot(name{araC}[.],dna[.],met[.],up[.],dw[.]),dna(name{BS_267_283}[.],prot[.],up[#],dw[#]) @ 'rvs_TranscriptionFactorMet_AssemblyRule_2'
+'TranscriptionFactorMet_AssemblyRule_3' prot(name{araC}[.],dna[1],met[.],up[.],dw[.]),dna(name{BS_56_72}[.],prot[1],up[#],dw[#]),prot(name{araC}[.],dna[3],met[.],up[.],dw[.]),dna(name{BS_267_283}[.],prot[3],up[#],dw[#]),dna(name{araC}[.],type{pro1}[.],prot[.],up[#],dw[#]) -> prot(name{araC}[.],dna[2],met[.],up[.],dw[1]),dna(name{BS_56_72}[.],prot[2],up[#],dw[#]),prot(name{araC}[.],dna[3],met[.],up[1],dw[.]),dna(name{BS_267_283}[.],prot[3],up[#],dw[#]),dna(name{araC}[.],type{pro1}[.],prot[.],up[#],dw[#]) @ 'fwd_TranscriptionFactorMet_AssemblyRule_3'
+'TranscriptionFactorMet_AssemblyRule_3_rev' prot(name{araC}[.],dna[2],met[.],up[.],dw[1]),dna(name{BS_56_72}[.],prot[2],up[#],dw[#]),prot(name{araC}[.],dna[3],met[.],up[1],dw[.]),dna(name{BS_267_283}[.],prot[3],up[#],dw[#]),dna(name{araC}[.],type{pro1}[.],prot[.],up[#],dw[#]) -> prot(name{araC}[.],dna[1],met[.],up[.],dw[.]),dna(name{BS_56_72}[.],prot[1],up[#],dw[#]),prot(name{araC}[.],dna[3],met[.],up[.],dw[.]),dna(name{BS_267_283}[.],prot[3],up[#],dw[#]),dna(name{araC}[.],type{pro1}[.],prot[.],up[#],dw[#]) @ 'rvs_TranscriptionFactorMet_AssemblyRule_3'
+'TranscriptionFactorMet_AssemblyRule_5' prot(name{araC}[.],dna[.],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_35_51}[.],prot[.],up[#],dw[#]) -> prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_35_51}[.],prot[2],up[#],dw[#]) @ 'fwd_TranscriptionFactorMet_AssemblyRule_5'
+'TranscriptionFactorMet_AssemblyRule_5_rev' prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_35_51}[.],prot[2],up[#],dw[#]) -> prot(name{araC}[.],dna[.],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_35_51}[.],prot[.],up[#],dw[#]) @ 'rvs_TranscriptionFactorMet_AssemblyRule_5'
+'TranscriptionFactorMet_AssemblyRule_6' prot(name{araC}[.],dna[1],met[.],up[.],dw[.]),dna(name{BS_56_72}[.],prot[1],up[#],dw[#]),met(name{alpha_L_arabinopyranose}[.],prot[.]) -> prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),dna(name{BS_56_72}[.],prot[2],up[#],dw[#]),met(name{alpha_L_arabinopyranose}[.],prot[1]) @ 'fwd_TranscriptionFactorMet_AssemblyRule_6'
+'TranscriptionFactorMet_AssemblyRule_6_rev' prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),dna(name{BS_56_72}[.],prot[2],up[#],dw[#]),met(name{alpha_L_arabinopyranose}[.],prot[1]) -> prot(name{araC}[.],dna[1],met[.],up[.],dw[.]),dna(name{BS_56_72}[.],prot[1],up[#],dw[#]),met(name{alpha_L_arabinopyranose}[.],prot[.]) @ 'rvs_TranscriptionFactorMet_AssemblyRule_6'
+'TranscriptionFactorMet_AssemblyRule_7' prot(name{araC}[.],dna[1],met[.],up[.],dw[.]),dna(name{BS_267_283}[.],prot[1],up[#],dw[#]),met(name{alpha_L_arabinopyranose}[.],prot[.]) -> prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),dna(name{BS_267_283}[.],prot[2],up[#],dw[#]),met(name{alpha_L_arabinopyranose}[.],prot[1]) @ 'fwd_TranscriptionFactorMet_AssemblyRule_7'
+'TranscriptionFactorMet_AssemblyRule_7_rev' prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),dna(name{BS_267_283}[.],prot[2],up[#],dw[#]),met(name{alpha_L_arabinopyranose}[.],prot[1]) -> prot(name{araC}[.],dna[1],met[.],up[.],dw[.]),dna(name{BS_267_283}[.],prot[1],up[#],dw[#]),met(name{alpha_L_arabinopyranose}[.],prot[.]) @ 'rvs_TranscriptionFactorMet_AssemblyRule_7'
+'TranscriptionFactorMet_AssemblyRule_8' prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_56_72}[.],prot[2],up[#],dw[#]),prot(name{araC}[.],dna[4],met[3],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[3]),dna(name{BS_35_51}[.],prot[4],up[#],dw[#]) -> prot(name{araC}[.],dna[3],met[2],up[.],dw[1]),met(name{alpha_L_arabinopyranose}[.],prot[2]),dna(name{BS_56_72}[.],prot[3],up[#],dw[#]),prot(name{araC}[.],dna[5],met[4],up[1],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[4]),dna(name{BS_35_51}[.],prot[5],up[#],dw[#]) @ 'fwd_TranscriptionFactorMet_AssemblyRule_8'
+'TranscriptionFactorMet_AssemblyRule_8_rev' prot(name{araC}[.],dna[3],met[2],up[.],dw[1]),met(name{alpha_L_arabinopyranose}[.],prot[2]),dna(name{BS_56_72}[.],prot[3],up[#],dw[#]),prot(name{araC}[.],dna[5],met[4],up[1],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[4]),dna(name{BS_35_51}[.],prot[5],up[#],dw[#]) -> prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_56_72}[.],prot[2],up[#],dw[#]),prot(name{araC}[.],dna[4],met[3],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[3]),dna(name{BS_35_51}[.],prot[4],up[#],dw[#]) @ 'rvs_TranscriptionFactorMet_AssemblyRule_8'
+'TranscriptionFactorMet_AssemblyRule_13' prot(name{araC}[.],dna[.],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_158_174}[.],prot[.],up[#],dw[#]) -> prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_158_174}[.],prot[2],up[#],dw[#]) @ 'fwd_TranscriptionFactorMet_AssemblyRule_13'
+'TranscriptionFactorMet_AssemblyRule_13_rev' prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_158_174}[.],prot[2],up[#],dw[#]) -> prot(name{araC}[.],dna[.],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_158_174}[.],prot[.],up[#],dw[#]) @ 'rvs_TranscriptionFactorMet_AssemblyRule_13'
+'TranscriptionFactorMet_AssemblyRule_14' prot(name{araC}[.],dna[.],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_137_153}[.],prot[.],up[#],dw[#]) -> prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_137_153}[.],prot[2],up[#],dw[#]) @ 'fwd_TranscriptionFactorMet_AssemblyRule_14'
+'TranscriptionFactorMet_AssemblyRule_14_rev' prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_137_153}[.],prot[2],up[#],dw[#]) -> prot(name{araC}[.],dna[.],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_137_153}[.],prot[.],up[#],dw[#]) @ 'rvs_TranscriptionFactorMet_AssemblyRule_14'
+'TranscriptionFactorMet_AssemblyRule_15' prot(name{araC}[.],dna[.],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_83_99}[.],prot[.],up[#],dw[#]) -> prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_83_99}[.],prot[2],up[#],dw[#]) @ 'fwd_TranscriptionFactorMet_AssemblyRule_15'
+'TranscriptionFactorMet_AssemblyRule_15_rev' prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_83_99}[.],prot[2],up[#],dw[#]) -> prot(name{araC}[.],dna[.],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_83_99}[.],prot[.],up[#],dw[#]) @ 'rvs_TranscriptionFactorMet_AssemblyRule_15'
+'TranscriptionFactorMet_AssemblyRule_16' prot(name{araC}[.],dna[.],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_62_78}[.],prot[.],up[#],dw[#]) -> prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_62_78}[.],prot[2],up[#],dw[#]) @ 'fwd_TranscriptionFactorMet_AssemblyRule_16'
+'TranscriptionFactorMet_AssemblyRule_16_rev' prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_62_78}[.],prot[2],up[#],dw[#]) -> prot(name{araC}[.],dna[.],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_62_78}[.],prot[.],up[#],dw[#]) @ 'rvs_TranscriptionFactorMet_AssemblyRule_16'
+'TranscriptionFactorMet_AssemblyRule_17' prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_83_99}[.],prot[2],up[#],dw[#]),prot(name{araC}[.],dna[4],met[3],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[3]),dna(name{BS_62_78}[.],prot[4],up[#],dw[#]) -> prot(name{araC}[.],dna[3],met[2],up[.],dw[1]),met(name{alpha_L_arabinopyranose}[.],prot[2]),dna(name{BS_83_99}[.],prot[3],up[#],dw[#]),prot(name{araC}[.],dna[5],met[4],up[1],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[4]),dna(name{BS_62_78}[.],prot[5],up[#],dw[#]) @ 'fwd_TranscriptionFactorMet_AssemblyRule_17'
+'TranscriptionFactorMet_AssemblyRule_17_rev' prot(name{araC}[.],dna[3],met[2],up[.],dw[1]),met(name{alpha_L_arabinopyranose}[.],prot[2]),dna(name{BS_83_99}[.],prot[3],up[#],dw[#]),prot(name{araC}[.],dna[5],met[4],up[1],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[4]),dna(name{BS_62_78}[.],prot[5],up[#],dw[#]) -> prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_83_99}[.],prot[2],up[#],dw[#]),prot(name{araC}[.],dna[4],met[3],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[3]),dna(name{BS_62_78}[.],prot[4],up[#],dw[#]) @ 'rvs_TranscriptionFactorMet_AssemblyRule_17'
+'TranscriptionFactorMet_AssemblyRule_18' prot(name{araC}[.],dna[.],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_57_73}[.],prot[.],up[#],dw[#]) -> prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_57_73}[.],prot[2],up[#],dw[#]) @ 'fwd_TranscriptionFactorMet_AssemblyRule_18'
+'TranscriptionFactorMet_AssemblyRule_18_rev' prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_57_73}[.],prot[2],up[#],dw[#]) -> prot(name{araC}[.],dna[.],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_57_73}[.],prot[.],up[#],dw[#]) @ 'rvs_TranscriptionFactorMet_AssemblyRule_18'
+'TranscriptionFactorMet_AssemblyRule_19' prot(name{araC}[.],dna[.],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_36_52}[.],prot[.],up[#],dw[#]) -> prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_36_52}[.],prot[2],up[#],dw[#]) @ 'fwd_TranscriptionFactorMet_AssemblyRule_19'
+'TranscriptionFactorMet_AssemblyRule_19_rev' prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_36_52}[.],prot[2],up[#],dw[#]) -> prot(name{araC}[.],dna[.],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_36_52}[.],prot[.],up[#],dw[#]) @ 'rvs_TranscriptionFactorMet_AssemblyRule_19'
+'TranscriptionFactorMet_AssemblyRule_20' prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_57_73}[.],prot[2],up[#],dw[#]),prot(name{araC}[.],dna[4],met[3],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[3]),dna(name{BS_36_52}[.],prot[4],up[#],dw[#]) -> prot(name{araC}[.],dna[3],met[2],up[.],dw[1]),met(name{alpha_L_arabinopyranose}[.],prot[2]),dna(name{BS_57_73}[.],prot[3],up[#],dw[#]),prot(name{araC}[.],dna[5],met[4],up[1],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[4]),dna(name{BS_36_52}[.],prot[5],up[#],dw[#]) @ 'fwd_TranscriptionFactorMet_AssemblyRule_20'
+'TranscriptionFactorMet_AssemblyRule_20_rev' prot(name{araC}[.],dna[3],met[2],up[.],dw[1]),met(name{alpha_L_arabinopyranose}[.],prot[2]),dna(name{BS_57_73}[.],prot[3],up[#],dw[#]),prot(name{araC}[.],dna[5],met[4],up[1],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[4]),dna(name{BS_36_52}[.],prot[5],up[#],dw[#]) -> prot(name{araC}[.],dna[2],met[1],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[1]),dna(name{BS_57_73}[.],prot[2],up[#],dw[#]),prot(name{araC}[.],dna[4],met[3],up[.],dw[.]),met(name{alpha_L_arabinopyranose}[.],prot[3]),dna(name{BS_36_52}[.],prot[4],up[#],dw[#]) @ 'rvs_TranscriptionFactorMet_AssemblyRule_20'
 
 %obs: 'obs_ADP_cyt' |met(name{ADP}[.],loc{cyt}[.],prot[.])|
 %obs: 'obs_ADP_per' |met(name{ADP}[.],loc{per}[.],prot[.])|
@@ -285,10 +356,9 @@
 %init: 't0_PROTON_per' met(name{PROTON}[.],loc{per}[.],prot[.])
 %init: 't0_WATER_cyt' met(name{WATER}[.],loc{cyt}[.],prot[.])
 %init: 't0_alpha_L_arabinopyranose_per' met(name{alpha_L_arabinopyranose}[.],loc{per}[.],prot[.])
-%init: 't0_araD_ter1_dna' dna(name{araB}[.],type{pro1}[.],prot[.],rna[.],up[.],dw[1]),dna(name{araB}[.],type{rbs}[.],prot[.],rna[.],up[1],dw[2]),dna(name{araB}[.],type{cds}[.],prot[.],rna[.],up[2],dw[3]),dna(name{araA}[.],type{rbs}[.],prot[.],rna[.],up[3],dw[4]),dna(name{araA}[.],type{cds}[.],prot[.],rna[.],up[4],dw[5]),dna(name{araD}[.],type{rbs}[.],prot[.],rna[.],up[5],dw[6]),dna(name{araD}[.],type{cds}[.],prot[.],rna[.],up[6],dw[7]),dna(name{araD}[.],type{ter1}[.],prot[.],rna[.],up[7],dw[.])
-%init: 't0_araC_ter1_dna' dna(name{araC}[.],type{pro1}[.],prot[.],rna[.],up[.],dw[1]),dna(name{BS_56_72}[.],type{BS}[.],prot[.],rna[.],up[1],dw[2]),dna(name{araC}[.],type{rbs}[.],prot[.],rna[.],up[2],dw[3]),dna(name{araC}[.],type{cds}[.],prot[.],rna[.],up[3],dw[4]),dna(name{araC}[.],type{ter1}[.],prot[.],rna[.],up[4],dw[.])
-%init: 't0_araE_ter1_dna' dna(name{araE}[.],type{pro1}[.],prot[.],rna[.],up[.],dw[1]),dna(name{araE}[.],type{rbs}[.],prot[.],rna[.],up[1],dw[2]),dna(name{araE}[.],type{cds}[.],prot[.],rna[.],up[2],dw[3]),dna(name{araE}[.],type{ter1}[.],prot[.],rna[.],up[3],dw[.])
-%init: 't0_operon_araFGH' dna(name{araF}[.],type{pro1}[.],prot[.],rna[.],up[.],dw[1]),dna(name{araF}[.],type{rbs}[.],prot[.],rna[.],up[1],dw[2]),dna(name{araF}[.],type{cds}[.],prot[.],rna[.],up[2],dw[3]),dna(name{araG}[.],type{rbs}[.],prot[.],rna[.],up[3],dw[4]),dna(name{araG}[.],type{cds}[.],prot[.],rna[.],up[4],dw[5]),dna(name{araH}[.],type{rbs}[.],prot[.],rna[.],up[5],dw[6]),dna(name{araH}[.],type{cds}[.],prot[.],rna[.],up[6],dw[7]),dna(name{araH}[.],type{ter1}[.],prot[.],rna[.],up[7],dw[.])
-%init: 't0_RNAP' cplx(name{RNAP}[.],dna[.],prot[.],rna[.])
-%init: 't0_ribosome' cplx(name{Ribosome}[.],dna[.],prot[.],rna[.])
+%init: 't0_araBAD_araC_operons' dna(name{araC}[.],type{ter1}[.],prot[.],rna[.],up[.],dw[17]),dna(name{araC}[.],type{cds}[.],prot[.],rna[.],up[17],dw[16]),dna(name{araC}[.],type{rbs}[.],prot[.],rna[.],up[16],dw[15]),dna(name{BS_267_283}[.],type{BS}[.],prot[.],rna[.],up[15],dw[1]),dna(name{araC}[.],type{pro1}[.],prot[.],rna[.],up[1],dw[2]),dna(name{BS_130_146}[.],type{BS}[.],prot[.],rna[.],up[2],dw[3]),dna(name{BS_109_125}[.],type{BS}[.],prot[.],rna[.],up[3],dw[4]),dna(name{BS_83_104}[.],type{BS}[.],prot[.],rna[.],up[4],dw[5]),dna(name{BS_56_72}[.],type{BS}[.],prot[.],rna[.],up[5],dw[6]),dna(name{BS_35_51}[.],type{BS}[.],prot[.],rna[.],up[6],dw[7]),dna(name{araB}[.],type{pro1}[.],prot[.],rna[.],up[7],dw[8]),dna(name{araB}[.],type{rbs}[.],prot[.],rna[.],up[8],dw[9]),dna(name{araB}[.],type{cds}[.],prot[.],rna[.],up[9],dw[10]),dna(name{araA}[.],type{rbs}[.],prot[.],rna[.],up[10],dw[11]),dna(name{araA}[.],type{cds}[.],prot[.],rna[.],up[11],dw[12]),dna(name{araD}[.],type{rbs}[.],prot[.],rna[.],up[12],dw[13]),dna(name{araD}[.],type{cds}[.],prot[.],rna[.],up[13],dw[14]),dna(name{araD}[.],type{ter1}[.],prot[.],rna[.],up[14],dw[.])
+%init: 't0_araE_operon' dna(name{BS_158_174}[.],type{BS}[.],prot[.],rna[.],up[.],dw[1]),dna(name{BS_137_153}[.],type{BS}[.],prot[.],rna[.],up[1],dw[2]),dna(name{BS_83_99}[.],type{BS}[.],prot[.],rna[.],up[2],dw[3]),dna(name{BS_62_78}[.],type{BS}[.],prot[.],rna[.],up[3],dw[4]),dna(name{araE}[.],type{pro1}[.],prot[.],rna[.],up[4],dw[5]),dna(name{araE}[.],type{rbs}[.],prot[.],rna[.],up[5],dw[6]),dna(name{araE}[.],type{cds}[.],prot[.],rna[.],up[6],dw[7]),dna(name{araE}[.],type{ter1}[.],prot[.],rna[.],up[7],dw[.])
+%init: 't0_araFGH_operon' dna(name{BS_57_73}[.],type{BS}[.],prot[.],rna[.],up[.],dw[1]),dna(name{BS_36_52}[.],type{BS}[.],prot[.],rna[.],up[1],dw[2]),dna(name{araF}[.],type{pro1}[.],prot[.],rna[.],up[2],dw[3]),dna(name{araF}[.],type{rbs}[.],prot[.],rna[.],up[3],dw[4]),dna(name{araF}[.],type{cds}[.],prot[.],rna[.],up[4],dw[5]),dna(name{araG}[.],type{rbs}[.],prot[.],rna[.],up[5],dw[6]),dna(name{araG}[.],type{cds}[.],prot[.],rna[.],up[6],dw[7]),dna(name{araH}[.],type{rbs}[.],prot[.],rna[.],up[7],dw[8]),dna(name{araH}[.],type{cds}[.],prot[.],rna[.],up[8],dw[9]),dna(name{araH}[.],type{ter1}[.],prot[.],rna[.],up[9],dw[.])
+%init: 't0_RNAP' cplx(name{RNAP}[.],loc{cyt}[.],dna[.],prot[.],rna[.])
+%init: 't0_ribosome' cplx(name{Ribosome}[.],loc{cyt}[.],dna[.],prot[.],rna[.])
 
