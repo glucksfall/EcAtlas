@@ -1,0 +1,11 @@
+SOURCE	TARGET
+rpoA	rpoA
+[rpoA, rpoA]	rpoB
+[rpoA, rpoA, rpoB]	rpoC
+[rpoA, rpoA, rpoB, rpoC]	rpoD
+[rpoA, rpoA, rpoB, rpoC]	rpoE
+[rpoA, rpoA, rpoB, rpoC]	rpoH
+[rpoA, rpoA, rpoB, rpoC]	rpoN
+[rpoA, rpoA, rpoB, rpoC]	rpoS
+[rpoA, rpoA, rpoB, rpoC]	fliA
+[rpoA, rpoA, rpoB, rpoC]	fecI
