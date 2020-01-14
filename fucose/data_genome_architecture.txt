@@ -1,0 +1,33 @@
+SOURCE	TARGET
+fucP-pro1	fucP-rbs
+fucP-rbs	fucP-cds
+fucP-cds	fucI-rbs
+fucI-rbs	fucI-cds
+fucI-cds	fucK-rbs
+fucK-rbs	fucK-cds
+fucK-cds	fucU-pro1
+fucU-pro1	fucU-rbs
+fucU-rbs	fucU-cds
+fucU-cds	fucR-pro1
+fucR-pro1	fucR-rbs
+fucR-rbs	fucR-cds
+fucR-cds	fucR-ter1
+
+fucA-pro1	fucA-rbs
+fucA-rbs	fucA-cds
+fucA-cds	fucO-pro1
+fucO-pro1	fucO-rbs
+fucO-rbs	fucO-cds
+fucO-cds	fucO-ter1
+
+aldA-pro1	aldA-rbs
+aldA-rbs	aldA-cds
+aldA-cds	aldA-ter1
+
+lldP-pro1	lldP-rbs
+lldP-rbs	lldP-cds
+lldP-cds	lldR-rbs
+lldR-rbs	lldR-cds
+lldR-cds	lldD-rbs
+lldD-rbs	lldD-cds
+lldD-cds	lldD-ter1
